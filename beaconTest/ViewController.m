@@ -15,6 +15,7 @@
 @property (nonatomic) ESTBeaconManager *beaconManager;
 @property (nonatomic) CLBeaconRegion *beaconRegion;
 @property (nonatomic) NSDictionary *placesByBeacons;
+@property (nonatomic, retain) IBOutlet UILabel *statusLabel;
 @end
 
 @implementation ViewController
@@ -24,18 +25,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //set a list of places by beacons
-    self.placesByBeacons = @{@"53111:27862": @{@"Heavenly Sanwices": @5, //read as: it's 50 meters from "Heavenly Sandwiches" to beacon with major 6754 adn minor 54361
-                                              @"Green & Green Salads": @15,
-                                              @"Mini Panini":@3
+    self.placesByBeacons = @{@"53111:27862": @{@"Resus": @1, //read as: it's 50 meters from "Heavenly Sandwiches" to beacon with major 6754 adn minor 54361
+                                              @"Toilet": @5,
+                                              @"Doctors Room":@10
                                               },
                              @"65397:35579" : @{
-                                     @"Heavenly Sandwiches":@2,
-                                     @"Green & Green Salads":@10,
-                                     @"Mini Panini":@2},
+                                     @"Resus":@10,
+                                     @"Toilet":@1,
+                                     @"Doctors Room":@5},
                              @"47967:54846": @{
-                                     @"Heavenly Sandwiches":@3,
-                                     @"Green & Green Salads":@5,
-                                     @"Mini Panini":@1
+                                     @"Resus":@5,
+                                     @"Toilet":@10,
+                                     @"Doctors Room":@1
                                      }
                              
                              };
@@ -83,6 +84,7 @@
     if(nearestBeacon) {
         NSArray *places = [self placesNearBeacon:nearestBeacon];
         //Update the UI here
+        self.statusLabel.text = [places objectAtIndex:0];
         NSLog(@"%@", places); //remove after implementing UI
         
     }
