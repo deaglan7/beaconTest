@@ -146,7 +146,7 @@
 }
 #pragma mark Beacon Methods
 - (void)beaconManager:(id)manager didEnterRegion:(CLBeaconRegion *)region {
-    
+/*
     if (region == resusRegion) {
     UILocalNotification *notification = [UILocalNotification new];
     notification.alertBody =
@@ -186,6 +186,7 @@
         [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
         NSLog(@"resus region detected");
     }
+ */
 }
 /*-(void)beaconManager:(id)manager didDetermineState:(CLRegionState)state forRegion:(CLBeaconRegion *)region
 {

@@ -24,18 +24,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //set a list of places by beacons
-    self.placesByBeacons = @{@"53111:27862": @{@"Heavenly Sanwices": @50, //read as: it's 50 meters from "Heavenly Sandwiches" to beacon with major 6754 adn minor 54361
-                                              @"Green & Green Salads": @150,
-                                              @"Mini Panini":@325
+    self.placesByBeacons = @{@"53111:27862": @{@"Heavenly Sanwices": @5, //read as: it's 50 meters from "Heavenly Sandwiches" to beacon with major 6754 adn minor 54361
+                                              @"Green & Green Salads": @15,
+                                              @"Mini Panini":@3
                                               },
                              @"65397:35579" : @{
-                                     @"Heavenly Sandwiches":@250,
-                                     @"Green & Green Salads":@100,
-                                     @"Mini Panini":@20},
+                                     @"Heavenly Sandwiches":@2,
+                                     @"Green & Green Salads":@10,
+                                     @"Mini Panini":@2},
                              @"47967:54846": @{
-                                     @"Heavenly Sandwiches":@350,
-                                     @"Green & Green Salads":@500,
-                                     @"Mini Panini":@170
+                                     @"Heavenly Sandwiches":@3,
+                                     @"Green & Green Salads":@5,
+                                     @"Mini Panini":@1
                                      }
                              
                              };
