@@ -16,6 +16,7 @@
 @property (nonatomic) CLBeaconRegion *beaconRegion;
 @property (nonatomic) NSDictionary *placesByBeacons;
 @property (nonatomic, retain) IBOutlet UILabel *statusLabel;
+@property (nonatomic, retain) IBOutlet UILabel *wardLabel;
 @end
 
 @implementation ViewController
@@ -81,12 +82,19 @@
 
 -(void)beaconManager:(id)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region {
     CLBeacon *nearestBeacon = beacons.firstObject;
-    if(nearestBeacon) {
+    
+    if (nearestBeacon) {
+        self.wardLabel.text = @"Psych Ward!!!";
+    }
+    if(nearestBeacon.proximity == CLProximityImmediate) {
         NSArray *places = [self placesNearBeacon:nearestBeacon];
         //Update the UI here
         self.statusLabel.text = [places objectAtIndex:0];
         NSLog(@"%@", places); //remove after implementing UI
-        
     }
+        else if (nearestBeacon.proximity >= CLProximityNear) {
+            self.statusLabel.text = @"scanning...";
+        }
+    
 }
 @end

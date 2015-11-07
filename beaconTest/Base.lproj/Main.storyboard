@@ -25,7 +25,27 @@
                                     <constraint firstAttribute="width" constant="202" id="z1p-o2-NH3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WardLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2T-ZZ-3qk">
+                                <rect key="frame" x="30" y="20" width="550" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="FTJ-BL-JnI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nearest Kit:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q91-iX-GWk">
+                                <rect key="frame" x="164" y="193" width="222" height="28"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="G4R-jC-Woy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -33,11 +53,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="d6p-Ph-Yft" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EOc-B6-bAQ"/>
+                            <constraint firstItem="Q91-iX-GWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FZr-wQ-PcL"/>
                             <constraint firstItem="d6p-Ph-Yft" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KTS-zD-9eL"/>
+                            <constraint firstItem="u2T-ZZ-3qk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NA7-sr-0FY"/>
+                            <constraint firstItem="u2T-ZZ-3qk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kTD-Fd-bg9"/>
+                            <constraint firstItem="d6p-Ph-Yft" firstAttribute="top" secondItem="Q91-iX-GWk" secondAttribute="bottom" constant="20" id="mUS-jb-XTv"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="statusLabel" destination="d6p-Ph-Yft" id="UPu-u2-Q7w"/>
+                        <outlet property="wardLabel" destination="u2T-ZZ-3qk" id="RHA-QX-h9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
