@@ -11,6 +11,7 @@
 #import "HotspotViewController.h"
 #import "MapViewController.h"
 #import <EstimoteSDK/EstimoteSDK.h>
+#import "beaconTest-Swift.h"
 
 
 @interface ViewController () <ESTBeaconManagerDelegate>
@@ -20,6 +21,7 @@
 @property (nonatomic) NSDictionary *placesByBeacons;
 @property (nonatomic, retain) IBOutlet UILabel *statusLabel;
 @property (nonatomic, retain) IBOutlet UILabel *wardLabel;
+//@property (nonatomic) LocationService *locationService;
 @end
 
 @implementation ViewController
@@ -27,6 +29,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    LocationService *locService = [[LocationService alloc] init];
+    NSString *temp = [locService getLocation];
+    //self.wardLabel.text = temp;
+    
+    //self.locationService = [LocationService new];
+    //[self.locationService getLocation];
     
     //set a list of places by beacons
     self.placesByBeacons = @{@"53111:27862": @{@"Resus": @1, //read as: it's 50 meters from "Heavenly Sandwiches" to beacon with major 6754 adn minor 54361
