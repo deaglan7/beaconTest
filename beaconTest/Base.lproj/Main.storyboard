@@ -148,13 +148,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map view.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-Ne-BP4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="528"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Map.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-Ne-BP4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <animations/>
                                 <rect key="contentStretch" x="0.69999999999999996" y="0.14999999999999999" width="0.0" height="1"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-oP-hrA">
-                                <rect key="frame" x="305" y="373" width="43" height="41"/>
+                                <rect key="frame" x="280" y="363" width="43" height="41"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.029710735754511663" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="7"/>
@@ -169,15 +169,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-gt-Oki">
-                                <rect key="frame" x="74" y="183" width="47" height="47"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                                <connections>
-                                    <action selector="hotspotClicked:" destination="dA1-Uk-Bko" eventType="touchUpInside" id="vyp-Q0-Cd6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-JY-cXg">
                                 <rect key="frame" x="0.0" y="137" width="375" height="21"/>
                                 <animations/>
@@ -193,7 +184,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2af-F2-ZMH">
-                                <rect key="frame" x="33" y="486" width="47" height="47"/>
+                                <rect key="frame" x="121" y="390" width="47" height="47"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="7"/>
@@ -208,6 +199,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-gt-Oki">
+                                <rect key="frame" x="248" y="227" width="47" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                <connections>
+                                    <action selector="hotspotClicked:" destination="dA1-Uk-Bko" eventType="touchUpInside" id="vyp-Q0-Cd6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
