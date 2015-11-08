@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -109,7 +110,16 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="RKL-Gk-BUZ"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="1mY-cb-YEf"/>
+                    <navigationItem key="navigationItem" id="1mY-cb-YEf">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="organize" id="c5A-eg-bjx">
+                                <color key="tintColor" red="1" green="0.0" blue="0.03079350443" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem title="3" id="bQX-7S-P0D">
+                                <color key="tintColor" red="1" green="0.0" blue="0.03079350443" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="statusLabel" destination="d6p-Ph-Yft" id="UPu-u2-Q7w"/>
