@@ -85,14 +85,16 @@
     else if ([resus isEqualToString:@"yes"]) {
         //if Resus test complete, give some feedback
         self.firstTaskLabel.text = @"You've found the Resus Trolley";
-        self.firstTaskCheck.image = [UIImage imageNamed:@"Jane.png"];
+        self.firstTaskCheck.image = [UIImage imageNamed:@"Crash_Cart.jpg"];
         self.firstTaskDistance.text = @"Complete";
+        self.secondTaskCheck.hidden = FALSE;
+        
     }
     if ([resus isEqualToString:@"yes"] && !doctorsRoom) {
         //if Resus complete, but Doctors Room outstanding, show task
-        secondTaskDistance.hidden = FALSE;
-        secondTaskLabel.hidden = FALSE;
-        secondTaskDistance.hidden = FALSE;
+        self.secondTaskDistance.hidden = FALSE;
+        self.secondTaskLabel.hidden = FALSE;
+        self.secondTaskCheck.hidden = FALSE;
         
         self.secondTaskLabel.text = @"Please find the Doctors Room";
         self.secondTaskCheck.image = [UIImage imageNamed:@"doctorRoom1.jpg"];
@@ -100,12 +102,12 @@
     }
     if ([doctorsRoom isEqualToString: @"yes"]) {
         //if Doctors Room complete, give some feedback
-        secondTaskDistance.hidden = FALSE;
-        secondTaskLabel.hidden = FALSE;
-        secondTaskDistance.hidden = FALSE;
+        self.secondTaskDistance.hidden = FALSE;
+        self.secondTaskLabel.hidden = FALSE;
+        self.secondTaskCheck.hidden = FALSE;
         NSLog(@"doctors is equal to yes");
         self.secondTaskLabel.text = @"You found the Doctors Room";
-        self.secondTaskCheck.image = [UIImage imageNamed:@"doctorRoom2.jpg"];
+        self.secondTaskCheck.image = [UIImage imageNamed:@"doctorRoom1.jpg"];
         self.secondTaskDistance.text = @"Complete";
     }
     if (induced) {
@@ -114,7 +116,7 @@
         NSLog(@"hidden the secondNextButton from view will appear");
         self.thirdTaskLabel.text = @"You have been induced!";
         self.thirdTaskCheck.image = [UIImage imageNamed:@"compass.jpg"];
-        self.thirdTaskCheck.hidden = false;
+        self.thirdTaskLabel.hidden = false;
         self.thirdTaskCheck.hidden = false;
     }
     
@@ -182,7 +184,7 @@
             }
             else if (nearestBeacon.proximity == CLProximityNear) {
                 if (!doctorsRoom) {
-                
+                    if (resus) {
                 self.secondTaskDistance.text = @"Located";
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
                 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -190,7 +192,7 @@
                 //do something to suggest the feature is there
                 secondNextButton.hidden=FALSE;
                 NSLog(@"the secondNextButton is visible form proximity trigger");
-                
+                    }
             }
             }
     }
@@ -225,7 +227,9 @@
         first.navigationItem.title = @"Resus";
         first.induction = TRUE;
         first.resus = TRUE;
-        first.doctors = FALSE;
+//        first.doctors = FALSE;
+        [[segue destinationViewController] setFeatureSubject:@"resus"];
+//        first.featureTExt.text = @"Healthcare organisations have an obligation to provide a high-quality resuscitation service, and to ensure that staff are trained and updated regularly to a level of proficiency appropriate to each individual’s expected role. As part of the quality standards for cardiopulmonary resuscitation practice and training this document provides lists of the minimum equipment and drugs required for cardiopulmonary resuscitation";
     }
        else if (sender == secondNextButton) {
      HotspotViewController *doctor  = [segue destinationViewController];
@@ -235,6 +239,7 @@
            doctor.induction = TRUE;
            doctor.resus = FALSE;
            doctor.doctors = TRUE;
+           doctor.featureTExt.text = @"This is a dedicated place for doctors to escape the nurses and log on to a computer with extremely poor wi fi before being pestered to do a discharge summary for a patient who isn’t going home for a week.";
      
      }
      /*

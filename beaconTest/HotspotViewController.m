@@ -16,7 +16,7 @@
 @synthesize induction, testView, testLabel, button1, button2, button3;
 @synthesize testString;
 @synthesize resus, doctors;
-@synthesize featureImage;
+@synthesize featureImage, featureTExt, featureSubject, featureField;
 @synthesize resusYes, doctorsYes;
 
 - (void)viewDidLoad {
@@ -25,6 +25,7 @@
     testView.hidden = TRUE;
     resusYes = FALSE;
     doctorsYes = FALSE;
+    testView.hidden = TRUE;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    NSString *induced = [defaults stringForKey:@"InductionResult"];
     NSString *alreadyResus = [defaults stringForKey:@"ResusResult"];
@@ -35,11 +36,21 @@
     if ([alreadyDoc isEqualToString:@"yes"]) {
         doctorsYes = TRUE;
     }
+    if (resus) {
+        featureTExt.text = @"Healthcare organisations have an obligation to provide a high-quality resuscitation service, and to ensure that staff are trained and updated regularly to a level of proficiency appropriate to each individual’s expected role. As part of the quality standards for cardiopulmonary resuscitation practice and training this document provides lists of the minimum equipment and drugs required for cardiopulmonary resuscitation. Have a look through the drawers to learn more about what is present, and click here for a comprehensive list. Then answer the following question:";
+        featureImage.image = [UIImage imageNamed:@"Crash_Cart.jpg"];
+    }
     
+    if (doctors) {
+        featureTExt.text = @"This is a dedicated place for doctors to escape the nurses and log on to a computer with extremely poor wi fi before being pestered to do a discharge summary for a patient who isn’t going home for a week.";
+        featureImage.image = [UIImage imageNamed:@"doctorRoom1.jpg"];
+    }
     
     if (induction) {
         NSLog(@"we are in an induction");
         testView.hidden = FALSE;
+        featureField.hidden = true;
+        
         if (resus) {
             testLabel.text = @"where is the LMA?";
         }
