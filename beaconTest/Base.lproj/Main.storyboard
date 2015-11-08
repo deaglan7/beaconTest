@@ -100,6 +100,9 @@
                                 <state key="normal" image="Location Pin.png">
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="dA1-Uk-Bko" kind="show" id="Szj-n6-bG8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -144,7 +147,7 @@
         <!--Map View Controller-->
         <scene sceneID="FzI-ca-EH3">
             <objects>
-                <viewController id="dA1-Uk-Bko" customClass="mapViewController" sceneMemberID="viewController">
+                <viewController id="dA1-Uk-Bko" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rkx-sF-EmU"/>
                         <viewControllerLayoutGuide type="bottom" id="UPL-VR-apg"/>
@@ -153,49 +156,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vm-Qb-TnH">
+                                <rect key="frame" x="0.0" y="140" width="375" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estimote map 3.png" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-Ne-BP4">
-                                <rect key="frame" x="-22" y="130" width="622" height="533"/>
+                                <rect key="frame" x="0.0" y="169" width="360" height="358"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-gt-Oki">
-                                <rect key="frame" x="112" y="242" width="47" height="47"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.66549145370929697" green="1" blue="0.76804697225729623" alpha="0.369957890070922" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mh-ij-LBl">
-                                <rect key="frame" x="363" y="239" width="47" height="47"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.66549145370929697" green="1" blue="0.76804697225729623" alpha="0.369957890070922" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-oP-hrA">
-                                <rect key="frame" x="253" y="430" width="43" height="41"/>
+                                <rect key="frame" x="241" y="313" width="43" height="41"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.029710735754511663" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="7"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2af-F2-ZMH">
-                                <rect key="frame" x="85" y="388" width="47" height="47"/>
+                                <rect key="frame" x="48" y="342" width="47" height="47"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.66549145370929697" green="1" blue="0.76804697225729623" alpha="0.369957890070922" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="7"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrw-u1-Zxe">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-gt-Oki">
+                                <rect key="frame" x="72" y="225" width="47" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="currentLabel" destination="5Vm-Qb-TnH" id="M2Q-bd-OGw"/>
+                        <outlet property="h1Button" destination="ZtZ-gt-Oki" id="udh-jx-e6h"/>
+                        <outlet property="h2Button" destination="2af-F2-ZMH" id="046-IQ-Fge"/>
+                        <outlet property="h3Button" destination="TlK-oP-hrA" id="eyw-yK-o4R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7Z-lw-sQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="819"/>
+            <point key="canvasLocation" x="-274.5" y="818.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="skM-J0-u2l">
@@ -309,7 +319,7 @@
                                 <rect key="frame" x="22" y="64" width="300" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gdo-UV-dfW">
@@ -327,7 +337,7 @@
                                         <rect key="frame" x="8" y="8" width="319" height="37"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3go-Ot-eez">
@@ -396,4 +406,7 @@
         <image name="info2.png" width="103" height="126"/>
         <image name="lightbulb.png" width="82" height="134"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qdV-0V-COe"/>
+    </inferredMetricsTieBreakers>
 </document>
