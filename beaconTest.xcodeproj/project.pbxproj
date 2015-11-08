@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AD426791BEEF12E002ED520 /* estimote map 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD426781BEEF12E002ED520 /* estimote map 3.png */; };
 		8091D3E71BEEDA5E00E411CD /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E31BEEDA5E00E411CD /* search.png */; };
 		8091D3E81BEEDA5E00E411CD /* echo logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E41BEEDA5E00E411CD /* echo logo.png */; };
 		8091D3E91BEEDA5E00E411CD /* equipment.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E51BEEDA5E00E411CD /* equipment.png */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AD426781BEEF12E002ED520 /* estimote map 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "estimote map 3.png"; path = "../../../Desktop/estimote map 3.png"; sourceTree = "<group>"; };
 		8091D3E31BEEDA5E00E411CD /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		8091D3E41BEEDA5E00E411CD /* echo logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "echo logo.png"; sourceTree = "<group>"; };
 		8091D3E51BEEDA5E00E411CD /* equipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equipment.png; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		8091D3E21BEEDA4800E411CD /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				0AD426781BEEF12E002ED520 /* estimote map 3.png */,
 				8091D3EB1BEEDA6700E411CD /* Admin.png */,
 				8091D3EC1BEEDA6700E411CD /* Critical.png */,
 				8091D3ED1BEEDA6700E411CD /* Female toilet.png */,
@@ -331,6 +334,7 @@
 				8091D3FA1BEEDA6700E411CD /* info2.png in Resources */,
 				8091D3FB1BEEDA6700E411CD /* lightbulb.png in Resources */,
 				8091D3F61BEEDA6700E411CD /* Female toilet.png in Resources */,
+				0AD426791BEEF12E002ED520 /* estimote map 3.png in Resources */,
 				8091D3FC1BEEDA6700E411CD /* Emergency.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
