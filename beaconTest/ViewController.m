@@ -31,8 +31,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    LocationService *locService = [[LocationService alloc] init];
-    NSString *temp = [locService getLocation];
+    //LocationService *locService = [[LocationService alloc] init];
+    //NSString *temp = [locService getLocation];
     //self.wardLabel.text = temp;
     
     //self.locationService = [LocationService new];

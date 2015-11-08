@@ -10,7 +10,22 @@ import Foundation
 import Darwin
 
 @objc class LocationService : NSObject {
-    func getLocation() -> String
+    
+    //array of beacons [id,x,y,d]
+    func calculateLocation() -> String
+    {
+        var min = 0;
+        var max = 100;
+        
+        var beacons = [[53111,1,1],[65397,2,2],[47967,3,3]];
+        
+        var location = getLocation(beacons)
+        
+        return String(location[0]) + String(location[1]);
+    }
+    
+    //Returns x,y
+    func getLocation(beacons : [[Int]]) -> [Int]
     {
         //return "hello world"
         //P1 = (3,0) r1 = 6.4031
@@ -21,14 +36,14 @@ import Darwin
         
         //Calculation
         //P1,P2,P3 is the point and 2-dimension vector
-        let P1 = [3.0, 0.0]
-        let P2 = [9.0,0.0]
-        let P3 = [4.0,8.0]
+        let P1 = [Double(beacons[0][1]), Double(beacons[0][2])]//[3.0,0.0]
+        let P2 = [Double(beacons[1][1]), Double(beacons[1][2])]//[9.0,0.0]
+        let P3 = [Double(beacons[1][1]), Double(beacons[2][2])]//[4.0,8.0]
         
         //this is the distance between all the points and the unknown point
-        let DistA = 6.4031
-        let DistB = 4.1231
-        let DistC = 5.6568
+        let DistA = Double(beacons[0][3])//6.4031
+        let DistB = Double(beacons[1][3])//4).1231
+        let DistC = Double(beacons[2][3])//5.6568
         
         //return "Hello";
         
@@ -36,9 +51,9 @@ import Darwin
         var ex = [Double]();
         var temp = 0.0;
         for i in  0..<P1.count {
-            let t1 = P2[i]
-            let t2 = P1[i]
-            let t = t1 - t2
+            let t1 : Double = P2[i]
+            let t2 : Double = P1[i]
+            let t  : Double = t1 - t2
             temp += (t*t)
         }
         for i in 0..<P1.count {
@@ -119,7 +134,8 @@ import Darwin
         }
         
         // x = (pow(DistA,2) - pow(DistB,2) + pow(d,2))/(2*d)
-        var xval : Double = (pow(DistA,2) - pow(DistB,2) + pow(d,2))/(2*d);
+        var two = Double(2);
+        var xval : Double = (pow(DistA,two) - pow(DistB,two) + pow(d,two))/(2*d);
         
         // y = ((pow(DistA,2) - pow(DistC,2) + pow(i,2) + pow(j,2))/(2*j)) - ((i/j)*x)
         var yval : Double = ((pow(DistA,2) - pow(DistC,2) + pow(ival,2) + pow(jval,2))/(2*jval)) - ((ival/jval)*xval);
@@ -155,7 +171,7 @@ import Darwin
         //NSLog(@"final result %@",triPt);
         
         
-        let output = "[" + String(triPt[0]) + "," + String(triPt[1]) + ")";
+        //let output = "[" + String(triPt[0]) + "," + String(triPt[1]) + ")";
         //output.append(triPt[0]:String);
         //output.append(",");
         //output.append(triPt[1]:String);
@@ -170,7 +186,7 @@ for i in 0..<triPt.count
  //           output += ","
         }
 */
-        return output;
+        return [Int(triPt[0]), Int(triPt[1])];
         
 //        7.999978,4.000021710625001).
 

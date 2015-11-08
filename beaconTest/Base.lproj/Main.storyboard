@@ -180,18 +180,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Map.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-Ne-BP4">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <animations/>
+                                <rect key="contentStretch" x="0.69999999999999996" y="0.14999999999999999" width="0.0" height="1"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-oP-hrA">
-                                <rect key="frame" x="253" y="430" width="43" height="41"/>
+                                <rect key="frame" x="280" y="363" width="43" height="41"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.029710735754511663" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.25046618970640594" green="0.91583424761727739" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2af-F2-ZMH">
-                                <rect key="frame" x="48" y="342" width="47" height="47"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                <connections>
+                                    <action selector="hotspotClicked:" destination="dA1-Uk-Bko" eventType="touchUpInside" id="lXg-8z-MZ7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrw-u1-Zxe">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
@@ -201,20 +199,56 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-gt-Oki">
-                                <rect key="frame" x="72" y="225" width="47" height="47"/>
+                                <rect key="frame" x="248" y="227" width="47" height="47"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.62142646078054575" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                <connections>
+                                    <action selector="hotspotClicked:" destination="dA1-Uk-Bko" eventType="touchUpInside" id="vyp-Q0-Cd6"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locating..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-JY-cXg">
+                                <rect key="frame" x="5" y="605" width="341" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.47209084163592374" green="0.49237543981619236" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23H-U4-KkD">
+                                <rect key="frame" x="166" y="335" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.03079350443" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2af-F2-ZMH">
+                                <rect key="frame" x="121" y="390" width="47" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.62142646078054575" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                <connections>
+                                    <action selector="hotspotClicked:" destination="dA1-Uk-Bko" eventType="touchUpInside" id="CFP-5i-eDu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2x-ek-Lqa">
+                                <rect key="frame" x="5" y="635" width="375" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.67450980392156867" green="0.85098039215686272" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="currentLabel" destination="Nhp-JY-cXg" id="Gzu-QX-QRd"/>
+                        <outlet property="descLabel" destination="a2x-ek-Lqa" id="YuG-9c-OHn"/>
                         <outlet property="h1Button" destination="ZtZ-gt-Oki" id="udh-jx-e6h"/>
                         <outlet property="h2Button" destination="2af-F2-ZMH" id="046-IQ-Fge"/>
                         <outlet property="h3Button" destination="TlK-oP-hrA" id="eyw-yK-o4R"/>
+                        <outlet property="meLabel" destination="23H-U4-KkD" id="Wgo-D3-WvG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7Z-lw-sQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
