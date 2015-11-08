@@ -20,6 +20,9 @@
 		8091D3FA1BEEDA6700E411CD /* info2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3F11BEEDA6700E411CD /* info2.png */; };
 		8091D3FB1BEEDA6700E411CD /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3F21BEEDA6700E411CD /* lightbulb.png */; };
 		8091D3FC1BEEDA6700E411CD /* Emergency.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3F31BEEDA6700E411CD /* Emergency.png */; };
+		809A5AB21BEEDCCE004F7647 /* InductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB11BEEDCCE004F7647 /* InductionViewController.m */; };
+		809A5AB51BEEDCEF004F7647 /* HotspotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB41BEEDCEF004F7647 /* HotspotViewController.m */; };
+		809A5AB81BEEDCFD004F7647 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB71BEEDCFD004F7647 /* MapViewController.m */; };
 		80C0A5371BEE63DB00842CC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A5361BEE63DB00842CC2 /* main.m */; };
 		80C0A53A1BEE63DB00842CC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A5391BEE63DB00842CC2 /* AppDelegate.m */; };
 		80C0A53D1BEE63DB00842CC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A53C1BEE63DB00842CC2 /* ViewController.m */; };
@@ -63,6 +66,12 @@
 		8091D3F11BEEDA6700E411CD /* info2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info2.png; sourceTree = "<group>"; };
 		8091D3F21BEEDA6700E411CD /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightbulb.png; sourceTree = "<group>"; };
 		8091D3F31BEEDA6700E411CD /* Emergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Emergency.png; sourceTree = "<group>"; };
+		809A5AB01BEEDCCE004F7647 /* InductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InductionViewController.h; sourceTree = "<group>"; };
+		809A5AB11BEEDCCE004F7647 /* InductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InductionViewController.m; sourceTree = "<group>"; };
+		809A5AB31BEEDCEF004F7647 /* HotspotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotspotViewController.h; sourceTree = "<group>"; };
+		809A5AB41BEEDCEF004F7647 /* HotspotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotspotViewController.m; sourceTree = "<group>"; };
+		809A5AB61BEEDCFD004F7647 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		809A5AB71BEEDCFD004F7647 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		80C0A5321BEE63DB00842CC2 /* beaconTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beaconTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C0A5361BEE63DB00842CC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80C0A5381BEE63DB00842CC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,6 +166,12 @@
 				80C0A5391BEE63DB00842CC2 /* AppDelegate.m */,
 				80C0A53B1BEE63DB00842CC2 /* ViewController.h */,
 				80C0A53C1BEE63DB00842CC2 /* ViewController.m */,
+				809A5AB01BEEDCCE004F7647 /* InductionViewController.h */,
+				809A5AB11BEEDCCE004F7647 /* InductionViewController.m */,
+				809A5AB31BEEDCEF004F7647 /* HotspotViewController.h */,
+				809A5AB41BEEDCEF004F7647 /* HotspotViewController.m */,
+				809A5AB61BEEDCFD004F7647 /* MapViewController.h */,
+				809A5AB71BEEDCFD004F7647 /* MapViewController.m */,
 				80C0A53E1BEE63DB00842CC2 /* Main.storyboard */,
 				80C0A5441BEE63DB00842CC2 /* Assets.xcassets */,
 				80C0A5461BEE63DB00842CC2 /* LaunchScreen.storyboard */,
@@ -347,8 +362,11 @@
 			files = (
 				80C0A53D1BEE63DB00842CC2 /* ViewController.m in Sources */,
 				80C0A53A1BEE63DB00842CC2 /* AppDelegate.m in Sources */,
+				809A5AB51BEEDCEF004F7647 /* HotspotViewController.m in Sources */,
 				80C0A5371BEE63DB00842CC2 /* main.m in Sources */,
+				809A5AB21BEEDCCE004F7647 /* InductionViewController.m in Sources */,
 				80C0A5431BEE63DB00842CC2 /* beaconTest.xcdatamodeld in Sources */,
+				809A5AB81BEEDCFD004F7647 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

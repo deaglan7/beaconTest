@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "InductionViewController.h"
+#import "HotspotViewController.h"
+#import "MapViewController.h"
 #import <EstimoteSDK/EstimoteSDK.h>
 
 
@@ -103,4 +106,32 @@
         }
     
 }
+
+#pragma mark handle navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    
+    
+    if (sender == someButton) {
+        InductionViewController *induction = [segue destinationViewController];
+//        induction.testLength = 5;
+        induction.navigationItem.title = @"Induction";
+    }
+    else if (sender == anotherButton) {
+        HotspotViewController *hot = [segue destinationViewController];
+//        hot.testLength = 10;
+        hot.navigationItem.title = @"Upper Body";
+        
+    }
+    else if (sender == aDifferentButton) {
+        MapViewController *map = [segue destinationViewController];
+//        map.testLength = 35;
+        map.navigationItem.title = @"Chest/Abdomen";
+        
+    }
+}
+
 @end
