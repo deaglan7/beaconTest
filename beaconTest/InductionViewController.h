@@ -18,11 +18,13 @@
     UILabel *firstTaskLabel;
     UILabel *firstTaskDistance;
     UIButton *firstNextButton;
+    NSString *resus;
     
     UIImageView *secondTaskCheck;
     UILabel *secondTaskLabel;
     UILabel *secondTaskDistance;
     UIButton *secondNextButton;
+    NSString *doctorsRoom;
     
     UIImageView *thirdTaskCheck;
     UILabel *thirdTaskLabel;
@@ -35,11 +37,14 @@
 @property (nonatomic, retain) IBOutlet UILabel *firstTaskLabel;
 @property (nonatomic, retain) IBOutlet UILabel *firstTaskDistance;
 @property (nonatomic, retain) IBOutlet UIButton *firstNextButton;
+@property (nonatomic, retain) NSString *resus;
 
 @property (nonatomic, retain) IBOutlet UIImageView *secondTaskCheck;
 @property (nonatomic, retain) IBOutlet UILabel *secondTaskLabel;
 @property (nonatomic, retain) IBOutlet UILabel *secondTaskDistance;
 @property (nonatomic, retain) IBOutlet UIButton *secondNextButton;
+@property (nonatomic, retain) NSString *doctorsRoom;
+
 
 @property (nonatomic, retain) IBOutlet UIImageView *thirdTaskCheck;
 @property (nonatomic, retain) IBOutlet UILabel *thirdTaskLabel;

@@ -18,6 +18,7 @@
     UIButton *button2;
     UIButton *button3;
     
+    
     NSString *testString;
 
     //test type
@@ -25,12 +26,16 @@
     BOOL doctors;
     
     //feature content
+    NSString *featureSubject;
     UIImageView *featureImage;
-    
+    UITextView *featureText;
+    UITextField *featureFeedback;
     
     //test result
     BOOL resusYes;
     BOOL doctorsYes;
+    
+    
     
     
     
@@ -41,7 +46,10 @@
 @property (nonatomic, retain) IBOutlet UIButton *button1;
 @property (nonatomic, retain) IBOutlet UIButton *button2;
 @property (nonatomic, retain) IBOutlet UIButton *button3;
+@property (nonatomic, retain) IBOutlet UITextView *featureTExt;
+@property (nonatomic, retain) IBOutlet UITextField *featureField;
 @property (nonatomic, retain) NSString *testString;
+@property (nonatomic, retain) NSString *featureSubject;
 @property (nonatomic) BOOL resus;
 @property (nonatomic) BOOL doctors;
 @property (nonatomic, retain) IBOutlet UIImageView *featureImage;

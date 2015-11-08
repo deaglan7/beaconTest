@@ -212,6 +212,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="currentLabel" destination="Nhp-JY-cXg" id="Gzu-QX-QRd"/>
                         <outlet property="descLabel" destination="a2x-ek-Lqa" id="YuG-9c-OHn"/>
@@ -322,8 +323,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please find the Resus Trolley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utk-xc-Dc2">
-                                <rect key="frame" x="128" y="77" width="227" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please find the Resus Trolley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utk-xc-Dc2">
+                                <rect key="frame" x="127" y="77" width="227" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2lT-ZE-gkq"/>
@@ -333,7 +334,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6h-3v-dUR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6h-3v-dUR">
                                 <rect key="frame" x="10" y="77" width="100" height="100"/>
                                 <animations/>
                                 <constraints>
@@ -341,7 +342,7 @@
                                     <constraint firstAttribute="height" constant="100" id="fiF-Uh-MJP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQx-sD-q8p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQx-sD-q8p">
                                 <rect key="frame" x="128" y="147" width="227" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -352,15 +353,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBN-VT-rLD">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBN-VT-rLD">
                                 <rect key="frame" x="309" y="112" width="46" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qJc-vc-zlm"/>
+                                </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="h8l-Q4-Z05" kind="show" id="ucU-Hc-j2P"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please find the Doctors Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWB-PG-r6s">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please find the Doctors Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWB-PG-r6s">
                                 <rect key="frame" x="128" y="185" width="227" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -371,15 +375,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-GE-Pea">
-                                <rect key="frame" x="8" y="185" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="doctorRoom1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-GE-Pea">
+                                <rect key="frame" x="8" y="182" width="100" height="100"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="fxl-UC-BfH"/>
-                                    <constraint firstAttribute="width" constant="100" id="lbk-LO-vqh"/>
+                                    <constraint firstAttribute="height" constant="100" id="hKC-7s-gJN"/>
+                                    <constraint firstAttribute="width" constant="100" id="rzv-jE-WyK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0M-rs-3H0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0M-rs-3H0">
                                 <rect key="frame" x="128" y="255" width="227" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -390,15 +394,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-8G-58m">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-8G-58m">
                                 <rect key="frame" x="309" y="220" width="46" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LaJ-XJ-cr0"/>
+                                </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="h8l-Q4-Z05" kind="show" id="y8w-PJ-SZF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please find the Doctors Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iom-5H-VPS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please find the Doctors Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iom-5H-VPS">
                                 <rect key="frame" x="10" y="293" width="345" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -409,7 +416,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9KH-fU-ya3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9KH-fU-ya3">
                                 <rect key="frame" x="10" y="331" width="345" height="174"/>
                                 <animations/>
                                 <constraints>
@@ -420,28 +427,6 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Iom-5H-VPS" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="-10" id="0fi-db-goc"/>
-                            <constraint firstItem="4Od-GE-Pea" firstAttribute="top" secondItem="z6h-3v-dUR" secondAttribute="bottom" constant="8" id="0yW-tM-AA3"/>
-                            <constraint firstItem="S0M-rs-3H0" firstAttribute="leading" secondItem="4Od-GE-Pea" secondAttribute="trailing" constant="10" id="1vl-NM-JBz"/>
-                            <constraint firstItem="NWB-PG-r6s" firstAttribute="leading" secondItem="4Od-GE-Pea" secondAttribute="trailing" constant="10" id="4RR-Mr-f8g"/>
-                            <constraint firstItem="iQx-sD-q8p" firstAttribute="top" secondItem="utk-xc-Dc2" secondAttribute="bottom" constant="40" id="4er-tN-47w"/>
-                            <constraint firstItem="z6h-3v-dUR" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="10" id="5Te-SD-dJj"/>
-                            <constraint firstItem="9KH-fU-ya3" firstAttribute="top" secondItem="Iom-5H-VPS" secondAttribute="bottom" constant="8" id="6Ip-kf-gEC"/>
-                            <constraint firstItem="9KH-fU-ya3" firstAttribute="top" secondItem="Iom-5H-VPS" secondAttribute="bottom" constant="8" id="B7g-c0-N1r"/>
-                            <constraint firstItem="XAn-12-CWf" firstAttribute="top" secondItem="9KH-fU-ya3" secondAttribute="bottom" constant="118" id="B8w-sJ-vKq"/>
-                            <constraint firstItem="4Od-GE-Pea" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="10" id="CPs-2W-30e"/>
-                            <constraint firstItem="9KH-fU-ya3" firstAttribute="trailing" secondItem="onO-kR-oQD" secondAttribute="trailingMargin" id="KQ4-m7-pXR"/>
-                            <constraint firstItem="z6h-3v-dUR" firstAttribute="top" secondItem="oku-aI-UI8" secondAttribute="bottom" constant="10" id="UvG-SW-Zfh"/>
-                            <constraint firstItem="iQx-sD-q8p" firstAttribute="leading" secondItem="z6h-3v-dUR" secondAttribute="trailing" constant="10" id="WlQ-AL-pas"/>
-                            <constraint firstItem="Iom-5H-VPS" firstAttribute="leading" secondItem="9KH-fU-ya3" secondAttribute="trailing" constant="10" id="Wyv-Ch-W7R"/>
-                            <constraint firstItem="9KH-fU-ya3" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="-10" id="dVv-3m-Zjk"/>
-                            <constraint firstItem="Iom-5H-VPS" firstAttribute="trailing" secondItem="onO-kR-oQD" secondAttribute="trailingMargin" id="ieU-og-Afb"/>
-                            <constraint firstItem="Iom-5H-VPS" firstAttribute="top" secondItem="S0M-rs-3H0" secondAttribute="bottom" constant="8" id="n1Q-7P-Gau"/>
-                            <constraint firstItem="utk-xc-Dc2" firstAttribute="top" secondItem="oku-aI-UI8" secondAttribute="bottom" constant="10" id="qzs-at-zp5"/>
-                            <constraint firstItem="utk-xc-Dc2" firstAttribute="leading" secondItem="z6h-3v-dUR" secondAttribute="trailing" constant="10" id="utv-Fr-vAk"/>
-                            <constraint firstItem="S0M-rs-3H0" firstAttribute="top" secondItem="NWB-PG-r6s" secondAttribute="bottom" constant="40" id="zgo-Ti-G5h"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -473,23 +458,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Jane.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ek4-aU-3Ao">
-                                <rect key="frame" x="58" y="130" width="240" height="214"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Crash_Cart.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ek4-aU-3Ao">
+                                <rect key="frame" x="60" y="130" width="240" height="214"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="xMT-MB-63X"/>
+                                    <constraint firstAttribute="height" constant="214" id="y1z-kf-407"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIx-3B-Fgu">
-                                <rect key="frame" x="22" y="64" width="300" height="60"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gdo-UV-dfW">
                                 <rect key="frame" x="0.0" y="354" width="355" height="191"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dv9-VW-wNN">
@@ -530,11 +512,16 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Feedback" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqd-6Q-ENn">
+                                <rect key="frame" x="14" y="617" width="333" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oIx-3B-Fgu" firstAttribute="centerX" secondItem="9hk-ot-JuX" secondAttribute="centerX" id="66P-QO-XQW"/>
                             <constraint firstItem="Ek4-aU-3Ao" firstAttribute="centerX" secondItem="9hk-ot-JuX" secondAttribute="centerX" id="TP6-di-grS"/>
                         </constraints>
                     </view>
@@ -549,7 +536,9 @@
                         <outlet property="button1" destination="3go-Ot-eez" id="aQJ-l5-oPq"/>
                         <outlet property="button2" destination="OBI-tb-VH8" id="Xb8-AI-vZB"/>
                         <outlet property="button3" destination="AOk-3T-fR6" id="ran-pL-RrY"/>
+                        <outlet property="featureField" destination="jqd-6Q-ENn" id="IlO-UM-cah"/>
                         <outlet property="featureImage" destination="Ek4-aU-3Ao" id="CE4-AR-Yll"/>
+                        <outlet property="featureTExt" destination="gdo-UV-dfW" id="xfr-e9-feb"/>
                         <outlet property="testLabel" destination="56R-x3-GgE" id="YkA-wD-8XR"/>
                         <outlet property="testView" destination="Dv9-VW-wNN" id="B5n-kS-8Ac"/>
                     </connections>
@@ -561,21 +550,22 @@
     </scenes>
     <resources>
         <image name="Admin.png" width="291" height="137"/>
+        <image name="Crash_Cart.jpg" width="210" height="300"/>
         <image name="Critical.png" width="90" height="90"/>
         <image name="Emergency.png" width="99" height="94"/>
         <image name="Female toilet.png" width="35" height="90"/>
-        <image name="Jane.png" width="175" height="198"/>
         <image name="Location Pin.png" width="97" height="97"/>
+        <image name="Map.jpg" width="604" height="799"/>
+        <image name="doctorRoom1.jpg" width="640" height="427"/>
         <image name="equipment.png" width="141" height="132"/>
         <image name="estimote map 3.png" width="630" height="651"/>
         <image name="info2.png" width="103" height="126"/>
         <image name="lightbulb.png" width="82" height="134"/>
         <image name="male toilet.png" width="34" height="90"/>
-        <image name="map view.jpg" width="2535" height="1651"/>
         <image name="search.png" width="78" height="77"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qdV-0V-COe"/>
-        <segue reference="y8w-PJ-SZF"/>
+        <segue reference="ucU-Hc-j2P"/>
     </inferredMetricsTieBreakers>
 </document>
