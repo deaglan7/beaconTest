@@ -143,6 +143,43 @@
                     <view key="view" contentMode="scaleToFill" id="pHs-Yo-Q8p">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estimote map 3.png" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-Ne-BP4">
+                                <rect key="frame" x="-22" y="130" width="622" height="533"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-gt-Oki">
+                                <rect key="frame" x="112" y="242" width="47" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.66549145370929697" green="1" blue="0.76804697225729623" alpha="0.369957890070922" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mh-ij-LBl">
+                                <rect key="frame" x="363" y="239" width="47" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.66549145370929697" green="1" blue="0.76804697225729623" alpha="0.369957890070922" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-oP-hrA">
+                                <rect key="frame" x="253" y="430" width="43" height="41"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.029710735754511663" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2af-F2-ZMH">
+                                <rect key="frame" x="85" y="388" width="47" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.66549145370929697" green="1" blue="0.76804697225729623" alpha="0.369957890070922" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrw-u1-Zxe">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -245,5 +282,6 @@
     </scenes>
     <resources>
         <image name="Jane.png" width="175" height="198"/>
+        <image name="estimote map 3.png" width="630" height="651"/>
     </resources>
 </document>
