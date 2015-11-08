@@ -45,6 +45,13 @@
 		80C0A55E1BEE63DB00842CC2 /* beaconTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A55D1BEE63DB00842CC2 /* beaconTestUITests.m */; };
 		80C0A56D1BEE63E700842CC2 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C0A56C1BEE63E700842CC2 /* EstimoteSDK.framework */; };
 		80E8BA611BEF33F9000214B4 /* estimote map 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 80E8BA601BEF33F9000214B4 /* estimote map 3.png */; };
+		80EA96901BEFA7870034D5EA /* admin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA96891BEFA7870034D5EA /* admin2.png */; };
+		80EA96911BEFA7870034D5EA /* critical2.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968A1BEFA7870034D5EA /* critical2.png */; };
+		80EA96921BEFA7870034D5EA /* Echo logo final.svg in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968B1BEFA7870034D5EA /* Echo logo final.svg */; };
+		80EA96931BEFA7870034D5EA /* equipment 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968C1BEFA7870034D5EA /* equipment 2.png */; };
+		80EA96941BEFA7870034D5EA /* info3.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968D1BEFA7870034D5EA /* info3.png */; };
+		80EA96951BEFA7870034D5EA /* lightbulb 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968E1BEFA7870034D5EA /* lightbulb 2.png */; };
+		80EA96961BEFA7870034D5EA /* location pin 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968F1BEFA7870034D5EA /* location pin 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +123,13 @@
 		80C0A55F1BEE63DB00842CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80C0A56C1BEE63E700842CC2 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		80E8BA601BEF33F9000214B4 /* estimote map 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "estimote map 3.png"; sourceTree = "<group>"; };
+		80EA96891BEFA7870034D5EA /* admin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = admin2.png; sourceTree = "<group>"; };
+		80EA968A1BEFA7870034D5EA /* critical2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = critical2.png; sourceTree = "<group>"; };
+		80EA968B1BEFA7870034D5EA /* Echo logo final.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Echo logo final.svg"; sourceTree = "<group>"; };
+		80EA968C1BEFA7870034D5EA /* equipment 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "equipment 2.png"; sourceTree = "<group>"; };
+		80EA968D1BEFA7870034D5EA /* info3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info3.png; sourceTree = "<group>"; };
+		80EA968E1BEFA7870034D5EA /* lightbulb 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightbulb 2.png"; sourceTree = "<group>"; };
+		80EA968F1BEFA7870034D5EA /* location pin 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location pin 2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +173,13 @@
 		8091D3E21BEEDA4800E411CD /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				80EA96891BEFA7870034D5EA /* admin2.png */,
+				80EA968A1BEFA7870034D5EA /* critical2.png */,
+				80EA968B1BEFA7870034D5EA /* Echo logo final.svg */,
+				80EA968C1BEFA7870034D5EA /* equipment 2.png */,
+				80EA968D1BEFA7870034D5EA /* info3.png */,
+				80EA968E1BEFA7870034D5EA /* lightbulb 2.png */,
+				80EA968F1BEFA7870034D5EA /* location pin 2.png */,
 				806A1EB01BEF7D9100623688 /* close.png */,
 				806A1EA41BEF728C00623688 /* Icon-60@2x.png */,
 				806A1EA51BEF728C00623688 /* Icon-60@3x.png */,
@@ -368,18 +389,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80EA96921BEFA7870034D5EA /* Echo logo final.svg in Resources */,
 				8091D3F91BEEDA6700E411CD /* Location Pin.png in Resources */,
 				8091D3F51BEEDA6700E411CD /* Critical.png in Resources */,
 				8091D3EA1BEEDA5E00E411CD /* Settings.png in Resources */,
 				8091D3E81BEEDA5E00E411CD /* echo logo.png in Resources */,
 				806A1EB31BEF818A00623688 /* map view.jpg in Resources */,
+				80EA96911BEFA7870034D5EA /* critical2.png in Resources */,
+				80EA96941BEFA7870034D5EA /* info3.png in Resources */,
 				80C0A5451BEE63DB00842CC2 /* Assets.xcassets in Resources */,
+				80EA96931BEFA7870034D5EA /* equipment 2.png in Resources */,
 				80C0A5401BEE63DB00842CC2 /* Main.storyboard in Resources */,
 				8091D3F41BEEDA6700E411CD /* Admin.png in Resources */,
 				8091D3F71BEEDA6700E411CD /* male toilet.png in Resources */,
 				8091D3E91BEEDA5E00E411CD /* equipment.png in Resources */,
 				8091D3F81BEEDA6700E411CD /* Jane.png in Resources */,
+				80EA96901BEFA7870034D5EA /* admin2.png in Resources */,
 				806A1EAF1BEF7A7000623688 /* doctorRoom2.jpg in Resources */,
+				80EA96961BEFA7870034D5EA /* location pin 2.png in Resources */,
+				80EA96951BEFA7870034D5EA /* lightbulb 2.png in Resources */,
 				805830921BEF97E8006BFD5E /* Map.jpg in Resources */,
 				806A1EB11BEF7D9100623688 /* close.png in Resources */,
 				8091D3E71BEEDA5E00E411CD /* search.png in Resources */,

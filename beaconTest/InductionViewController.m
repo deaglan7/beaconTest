@@ -97,7 +97,7 @@
         self.secondTaskCheck.hidden = FALSE;
         
         self.secondTaskLabel.text = @"Please find the Doctors Room";
-        self.secondTaskCheck.image = [UIImage imageNamed:@"doctorRoom1.jpg"];
+        self.secondTaskCheck.image = [UIImage imageNamed:@"Jane.png"];
         self.secondTaskDistance.text = @"locating...";
     }
     if ([doctorsRoom isEqualToString: @"yes"]) {
@@ -170,6 +170,7 @@
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             AudioServicesPlaySystemSound(1007);
+                self.firstTaskCheck.image = [UIImage imageNamed:@"Crash_Cart.jpg"];
             //do something to suggest the feature is there
             firstNextButton.hidden=FALSE;
             }
