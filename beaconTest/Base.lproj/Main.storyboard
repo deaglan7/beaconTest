@@ -67,7 +67,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="287"/>
+            <point key="canvasLocation" x="-278" y="121"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="FzI-ca-EH3">
+            <objects>
+                <viewController id="dA1-Uk-Bko" customClass="mapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rkx-sF-EmU"/>
+                        <viewControllerLayoutGuide type="bottom" id="UPL-VR-apg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pHs-Yo-Q8p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7Z-lw-sQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="819"/>
+        </scene>
+        <!--Induction View Controller-->
+        <scene sceneID="4FH-b2-09C">
+            <objects>
+                <viewController id="Np3-uI-bS0" customClass="inductionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oku-aI-UI8"/>
+                        <viewControllerLayoutGuide type="bottom" id="XAn-12-CWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="onO-kR-oQD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svV-a1-w24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="121"/>
+        </scene>
+        <!--Hotspot View Controller-->
+        <scene sceneID="qO3-QK-jQz">
+            <objects>
+                <viewController id="h8l-Q4-Z05" customClass="hotspotViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="doB-DO-z4T"/>
+                        <viewControllerLayoutGuide type="bottom" id="shg-B7-WXV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9hk-ot-JuX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZ3-FS-oAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122" y="123"/>
         </scene>
     </scenes>
 </document>

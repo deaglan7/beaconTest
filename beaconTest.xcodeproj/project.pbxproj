@@ -520,6 +520,7 @@
 				80C0A5641BEE63DB00842CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80C0A5651BEE63DB00842CC2 /* Build configuration list for PBXNativeTarget "beaconTestTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				80C0A5671BEE63DB00842CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80C0A5681BEE63DB00842CC2 /* Build configuration list for PBXNativeTarget "beaconTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				80C0A56A1BEE63DB00842CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
