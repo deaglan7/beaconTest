@@ -102,11 +102,13 @@
     if (resusYes) {
         [defaults setObject:@"yes" forKey:@"ResusResult"];
     }
-    else if (doctorsYes) {
+    if (doctorsYes) {
         [defaults setObject:@"yes" forKey:@"DoctorsResult"];
+        NSLog(@"clever doctors. you found the rooms");
     }
     if (resusYes && doctorsYes) {
         [defaults setObject:@"yes" forKey:@"InductionResult"];
+        NSLog(@"a complete induction");
     }
     [defaults synchronize];
 }
