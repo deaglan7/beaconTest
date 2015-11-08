@@ -177,12 +177,19 @@
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="7"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-JY-cXg">
+                                <rect key="frame" x="0.0" y="137" width="375" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="currentLabel" destination="5Vm-Qb-TnH" id="M2Q-bd-OGw"/>
+                        <outlet property="currentLabel" destination="Nhp-JY-cXg" id="Gzu-QX-QRd"/>
                         <outlet property="h1Button" destination="ZtZ-gt-Oki" id="udh-jx-e6h"/>
                         <outlet property="h2Button" destination="2af-F2-ZMH" id="046-IQ-Fge"/>
                         <outlet property="h3Button" destination="TlK-oP-hrA" id="eyw-yK-o4R"/>
