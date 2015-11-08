@@ -16,6 +16,7 @@
 @synthesize firstTaskCheck, firstTaskLabel, firstTaskDistance;
 @synthesize secondTaskCheck, secondTaskLabel, secondTaskDistance;
 @synthesize thirdTaskCheck, thirdTaskLabel;
+@synthesize beaconManager, beaconRegion, placesByBeacons;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,10 +30,46 @@
     
     //populate the first image and label
     self.firstTaskLabel.text = @"Please find the Resus Trolley";
-    self.firstTaskCheck.image = [UIImage imageNamed:@"resus.jpg"];
+    self.firstTaskCheck.image = [UIImage imageNamed:@"Jane.png"];
     self.firstTaskDistance.text = @"locating...";
     
+    self.placesByBeacons = @{@"53111:27862": @{@"Resus": @1, //read as: it's 50 meters from "Heavenly Sandwiches" to beacon with major 6754 adn minor 54361
+                                               @"Toilet": @5,
+                                               @"Doctors Room":@10
+                                               },
+                             @"65397:35579" : @{
+                                     @"Resus":@10,
+                                     @"Toilet":@1,
+                                     @"Doctors Room":@5},
+                             @"47967:54846": @{
+                                     @"Resus":@5,
+                                     @"Toilet":@10,
+                                     @"Doctors Room":@1
+                                     }
+                             
+                             };
+    
+    
+    //define and start a beaconManager
+    self.beaconManager = [ESTBeaconManager new];
+    self.beaconManager.delegate = self;
+    
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"] identifier:@"ranged region"];
+    [self.beaconManager requestAlwaysAuthorization];
+    
+    
 }
+
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
+}
+
+-(void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -48,5 +85,48 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSArray *)placesNearBeacon:(CLBeacon *)beacon  {
+    NSString *beaconKey = [NSString stringWithFormat: @"%@:%@",
+                           beacon.major, beacon.minor];
+    NSDictionary *places = [self.placesByBeacons objectForKey:beaconKey];
+    NSArray *sortedPlaces = [places keysSortedByValueUsingComparator: ^NSComparisonResult(id obj1, id obj2){
+        return [obj1 compare:obj2];
+    }
+                             ];
+    return sortedPlaces;
+}
+
+
+-(void)beaconManager:(id)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region {
+    CLBeacon *nearestBeacon = beacons.firstObject;
+    
+    if (nearestBeacon.major.intValue == 53111) {
+        if (nearestBeacon.proximity >= CLProximityFar) {
+        //NSLog(@"nearestBeacon.major invalue == 53111");
+            self.firstTaskDistance.text = [NSString stringWithFormat:@"Distance %0.2f m", nearestBeacon.accuracy];}
+        else if (nearestBeacon.proximity == CLProximityNear) {
+            self.firstTaskDistance.text = @"Located";
+            NSLog(@"located");
+        }
+    }
+    else if (nearestBeacon.proximity >= CLProximityFar) {
+//        self.wardLabel.text = @"Somewhere else";
+    }
+    else if (nearestBeacon.proximity == CLProximityUnknown) {
+//        self.wardLabel.text = @"Proximity Unknown";
+    }
+    if(nearestBeacon.proximity == CLProximityNear) {
+        NSArray *places = [self placesNearBeacon:nearestBeacon];
+        //Update the UI here
+//        self.statusLabel.text = [places objectAtIndex:0];
+//        NSLog(@"%@", places); //remove after implementing UI
+    }
+    else if (nearestBeacon.proximity >= CLProximityNear) {
+//        self.statusLabel.text = @"scanning...";
+    }
+    
+}
+
 
 @end

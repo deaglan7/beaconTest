@@ -29,7 +29,6 @@
 		80C0A5401BEE63DB00842CC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80C0A53E1BEE63DB00842CC2 /* Main.storyboard */; };
 		80C0A5431BEE63DB00842CC2 /* beaconTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A5411BEE63DB00842CC2 /* beaconTest.xcdatamodeld */; };
 		80C0A5451BEE63DB00842CC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80C0A5441BEE63DB00842CC2 /* Assets.xcassets */; };
-		80C0A5481BEE63DB00842CC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80C0A5461BEE63DB00842CC2 /* LaunchScreen.storyboard */; };
 		80C0A5531BEE63DB00842CC2 /* beaconTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A5521BEE63DB00842CC2 /* beaconTestTests.m */; };
 		80C0A55E1BEE63DB00842CC2 /* beaconTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A55D1BEE63DB00842CC2 /* beaconTestUITests.m */; };
 		80C0A56D1BEE63E700842CC2 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C0A56C1BEE63E700842CC2 /* EstimoteSDK.framework */; };
@@ -81,7 +80,6 @@
 		80C0A53F1BEE63DB00842CC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80C0A5421BEE63DB00842CC2 /* beaconTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = beaconTest.xcdatamodel; sourceTree = "<group>"; };
 		80C0A5441BEE63DB00842CC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		80C0A5471BEE63DB00842CC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80C0A5491BEE63DB00842CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80C0A54E1BEE63DB00842CC2 /* beaconTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beaconTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C0A5521BEE63DB00842CC2 /* beaconTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beaconTestTests.m; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 				809A5AB71BEEDCFD004F7647 /* MapViewController.m */,
 				80C0A53E1BEE63DB00842CC2 /* Main.storyboard */,
 				80C0A5441BEE63DB00842CC2 /* Assets.xcassets */,
-				80C0A5461BEE63DB00842CC2 /* LaunchScreen.storyboard */,
 				80C0A5491BEE63DB00842CC2 /* Info.plist */,
 				80C0A5411BEE63DB00842CC2 /* beaconTest.xcdatamodeld */,
 				80C0A5351BEE63DB00842CC2 /* Supporting Files */,
@@ -324,7 +321,6 @@
 				8091D3F51BEEDA6700E411CD /* Critical.png in Resources */,
 				8091D3EA1BEEDA5E00E411CD /* Settings.png in Resources */,
 				8091D3E81BEEDA5E00E411CD /* echo logo.png in Resources */,
-				80C0A5481BEE63DB00842CC2 /* LaunchScreen.storyboard in Resources */,
 				80C0A5451BEE63DB00842CC2 /* Assets.xcassets in Resources */,
 				80C0A5401BEE63DB00842CC2 /* Main.storyboard in Resources */,
 				8091D3F41BEEDA6700E411CD /* Admin.png in Resources */,
@@ -408,14 +404,6 @@
 				80C0A53F1BEE63DB00842CC2 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		80C0A5461BEE63DB00842CC2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				80C0A5471BEE63DB00842CC2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

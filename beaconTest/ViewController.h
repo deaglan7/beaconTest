@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+{
 //here we are
-
+    UIButton *induce;
+}
+@property (nonatomic, retain) IBOutlet UIButton *induce;
 @end
 

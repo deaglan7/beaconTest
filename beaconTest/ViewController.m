@@ -23,7 +23,7 @@
 @end
 
 @implementation ViewController
-
+@synthesize induce;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -99,7 +99,7 @@
         NSArray *places = [self placesNearBeacon:nearestBeacon];
         //Update the UI here
         self.statusLabel.text = [places objectAtIndex:0];
-        NSLog(@"%@", places); //remove after implementing UI
+//        NSLog(@"%@", places); //remove after implementing UI
     }
         else if (nearestBeacon.proximity >= CLProximityNear) {
             self.statusLabel.text = @"scanning...";
@@ -115,12 +115,12 @@
     
     
     
-    if (sender == someButton) {
+    if (sender == induce) {
         InductionViewController *induction = [segue destinationViewController];
 //        induction.testLength = 5;
         induction.navigationItem.title = @"Induction";
     }
-    else if (sender == anotherButton) {
+/*    else if (sender == anotherButton) {
         HotspotViewController *hot = [segue destinationViewController];
 //        hot.testLength = 10;
         hot.navigationItem.title = @"Upper Body";
@@ -130,8 +130,9 @@
         MapViewController *map = [segue destinationViewController];
 //        map.testLength = 35;
         map.navigationItem.title = @"Chest/Abdomen";
-        
+ 
     }
+*/
 }
 
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <EstimoteSDK/EstimoteSDK.h>
 
-@interface InductionViewController : UIViewController
+
+@interface InductionViewController : UIViewController <ESTBeaconManagerDelegate>
 {
     UIImageView *firstTaskCheck;
     UILabel *firstTaskLabel;
@@ -19,6 +21,8 @@
     UIImageView *thirdTaskCheck;
        UILabel *thirdTaskLabel;
     
+    ESTBeaconManager *beaconManager;
+    CLBeaconRegion *region;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *firstTaskCheck;
@@ -30,5 +34,10 @@
 
 @property (nonatomic, retain) IBOutlet UIImageView *thirdTaskCheck;
 @property (nonatomic, retain) IBOutlet UILabel *thirdTaskLabel;
+
+@property (nonatomic) ESTBeaconManager *beaconManager;
+@property (nonatomic) CLBeaconRegion *beaconRegion;
+@property (nonatomic) NSDictionary *placesByBeacons;
+
 
 @end
