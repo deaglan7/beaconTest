@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <EstimoteSDK/EstimoteSDK.h>
 #import "HotspotViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 
 @interface InductionViewController : UIViewController <ESTBeaconManagerDelegate>
@@ -16,12 +17,15 @@
     UIImageView *firstTaskCheck;
     UILabel *firstTaskLabel;
     UILabel *firstTaskDistance;
-    UIButton *fristNextButton;
+    UIButton *firstNextButton;
+    
     UIImageView *secondTaskCheck;
-       UILabel *secondTaskLabel;
+    UILabel *secondTaskLabel;
     UILabel *secondTaskDistance;
+    UIButton *secondNextButton;
+    
     UIImageView *thirdTaskCheck;
-       UILabel *thirdTaskLabel;
+    UILabel *thirdTaskLabel;
     
     ESTBeaconManager *beaconManager;
     CLBeaconRegion *region;
@@ -31,9 +35,11 @@
 @property (nonatomic, retain) IBOutlet UILabel *firstTaskLabel;
 @property (nonatomic, retain) IBOutlet UILabel *firstTaskDistance;
 @property (nonatomic, retain) IBOutlet UIButton *firstNextButton;
+
 @property (nonatomic, retain) IBOutlet UIImageView *secondTaskCheck;
 @property (nonatomic, retain) IBOutlet UILabel *secondTaskLabel;
 @property (nonatomic, retain) IBOutlet UILabel *secondTaskDistance;
+@property (nonatomic, retain) IBOutlet UIButton *secondNextButton;
 
 @property (nonatomic, retain) IBOutlet UIImageView *thirdTaskCheck;
 @property (nonatomic, retain) IBOutlet UILabel *thirdTaskLabel;

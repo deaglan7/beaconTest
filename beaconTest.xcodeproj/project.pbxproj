@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AD426791BEEF12E002ED520 /* estimote map 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD426781BEEF12E002ED520 /* estimote map 3.png */; };
 		0AFB6FAC1BEF39CA0069EFDC /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB6FAB1BEF39CA0069EFDC /* LocationService.swift */; };
+		806A1E9B1BEF5DB600623688 /* compass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A1E9A1BEF5DB600623688 /* compass.jpg */; };
+		806A1EA31BEF631F00623688 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EA21BEF631F00623688 /* iTunesArtwork@2x.png */; };
+		806A1EA61BEF728C00623688 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EA41BEF728C00623688 /* Icon-60@2x.png */; };
+		806A1EA71BEF728C00623688 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EA51BEF728C00623688 /* Icon-60@3x.png */; };
+		806A1EAA1BEF733600623688 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806A1EA91BEF733600623688 /* InfoViewController.m */; };
+		806A1EAE1BEF7A7000623688 /* doctorRoom1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EAC1BEF7A7000623688 /* doctorRoom1.jpg */; };
+		806A1EAF1BEF7A7000623688 /* doctorRoom2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EAD1BEF7A7000623688 /* doctorRoom2.jpg */; };
+		806A1EB11BEF7D9100623688 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EB01BEF7D9100623688 /* close.png */; };
+		806A1EB31BEF818A00623688 /* map view.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EB21BEF818A00623688 /* map view.jpg */; };
 		8091D3E71BEEDA5E00E411CD /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E31BEEDA5E00E411CD /* search.png */; };
 		8091D3E81BEEDA5E00E411CD /* echo logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E41BEEDA5E00E411CD /* echo logo.png */; };
 		8091D3E91BEEDA5E00E411CD /* equipment.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E51BEEDA5E00E411CD /* equipment.png */; };
@@ -55,9 +63,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AD426781BEEF12E002ED520 /* estimote map 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "estimote map 3.png"; path = "../../../Desktop/estimote map 3.png"; sourceTree = "<group>"; };
 		0AFB6FAA1BEF39C90069EFDC /* beaconTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beaconTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AFB6FAB1BEF39CA0069EFDC /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		806A1E9A1BEF5DB600623688 /* compass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = compass.jpg; sourceTree = "<group>"; };
+		806A1EA21BEF631F00623688 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		806A1EA41BEF728C00623688 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		806A1EA51BEF728C00623688 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		806A1EA81BEF733600623688 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		806A1EA91BEF733600623688 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		806A1EAC1BEF7A7000623688 /* doctorRoom1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doctorRoom1.jpg; sourceTree = "<group>"; };
+		806A1EAD1BEF7A7000623688 /* doctorRoom2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doctorRoom2.jpg; sourceTree = "<group>"; };
+		806A1EB01BEF7D9100623688 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		806A1EB21BEF818A00623688 /* map view.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "map view.jpg"; sourceTree = "<group>"; };
 		8091D3E31BEEDA5E00E411CD /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		8091D3E41BEEDA5E00E411CD /* echo logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "echo logo.png"; sourceTree = "<group>"; };
 		8091D3E51BEEDA5E00E411CD /* equipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equipment.png; sourceTree = "<group>"; };
@@ -123,9 +140,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		806A1EAB1BEF7A6200623688 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				806A1EAC1BEF7A7000623688 /* doctorRoom1.jpg */,
+				806A1EAD1BEF7A7000623688 /* doctorRoom2.jpg */,
+				806A1EB21BEF818A00623688 /* map view.jpg */,
+			);
+			name = features;
+			sourceTree = "<group>";
+		};
 		8091D3E21BEEDA4800E411CD /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				806A1EB01BEF7D9100623688 /* close.png */,
+				806A1EA41BEF728C00623688 /* Icon-60@2x.png */,
+				806A1EA51BEF728C00623688 /* Icon-60@3x.png */,
+				806A1EA21BEF631F00623688 /* iTunesArtwork@2x.png */,
+				806A1E9A1BEF5DB600623688 /* compass.jpg */,
 				80E8BA601BEF33F9000214B4 /* estimote map 3.png */,
 				8091D3EB1BEEDA6700E411CD /* Admin.png */,
 				8091D3EC1BEEDA6700E411CD /* Critical.png */,
@@ -179,6 +211,8 @@
 				809A5AB61BEEDCFD004F7647 /* MapViewController.h */,
 				809A5AB71BEEDCFD004F7647 /* MapViewController.m */,
 				80C0A53E1BEE63DB00842CC2 /* Main.storyboard */,
+				806A1EA81BEF733600623688 /* InfoViewController.h */,
+				806A1EA91BEF733600623688 /* InfoViewController.m */,
 				80C0A5441BEE63DB00842CC2 /* Assets.xcassets */,
 				80C0A5491BEE63DB00842CC2 /* Info.plist */,
 				80C0A5411BEE63DB00842CC2 /* beaconTest.xcdatamodeld */,
@@ -192,6 +226,7 @@
 		80C0A5351BEE63DB00842CC2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				806A1EAB1BEF7A6200623688 /* features */,
 				8091D3E21BEEDA4800E411CD /* icons */,
 				80C0A5361BEE63DB00842CC2 /* main.m */,
 			);
@@ -331,18 +366,26 @@
 				8091D3F51BEEDA6700E411CD /* Critical.png in Resources */,
 				8091D3EA1BEEDA5E00E411CD /* Settings.png in Resources */,
 				8091D3E81BEEDA5E00E411CD /* echo logo.png in Resources */,
+				806A1EB31BEF818A00623688 /* map view.jpg in Resources */,
 				80C0A5451BEE63DB00842CC2 /* Assets.xcassets in Resources */,
 				80C0A5401BEE63DB00842CC2 /* Main.storyboard in Resources */,
 				8091D3F41BEEDA6700E411CD /* Admin.png in Resources */,
 				8091D3F71BEEDA6700E411CD /* male toilet.png in Resources */,
 				8091D3E91BEEDA5E00E411CD /* equipment.png in Resources */,
 				8091D3F81BEEDA6700E411CD /* Jane.png in Resources */,
+				806A1EAF1BEF7A7000623688 /* doctorRoom2.jpg in Resources */,
+				806A1EB11BEF7D9100623688 /* close.png in Resources */,
 				8091D3E71BEEDA5E00E411CD /* search.png in Resources */,
 				8091D3FA1BEEDA6700E411CD /* info2.png in Resources */,
+				806A1EA31BEF631F00623688 /* iTunesArtwork@2x.png in Resources */,
 				8091D3FB1BEEDA6700E411CD /* lightbulb.png in Resources */,
 				8091D3F61BEEDA6700E411CD /* Female toilet.png in Resources */,
 				80E8BA611BEF33F9000214B4 /* estimote map 3.png in Resources */,
+				806A1EA71BEF728C00623688 /* Icon-60@3x.png in Resources */,
 				8091D3FC1BEEDA6700E411CD /* Emergency.png in Resources */,
+				806A1EA61BEF728C00623688 /* Icon-60@2x.png in Resources */,
+				806A1E9B1BEF5DB600623688 /* compass.jpg in Resources */,
+				806A1EAE1BEF7A7000623688 /* doctorRoom1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +412,7 @@
 			files = (
 				80C0A53D1BEE63DB00842CC2 /* ViewController.m in Sources */,
 				80C0A53A1BEE63DB00842CC2 /* AppDelegate.m in Sources */,
+				806A1EAA1BEF733600623688 /* InfoViewController.m in Sources */,
 				809A5AB51BEEDCEF004F7647 /* HotspotViewController.m in Sources */,
 				80C0A5371BEE63DB00842CC2 /* main.m in Sources */,
 				809A5AB21BEEDCCE004F7647 /* InductionViewController.m in Sources */,

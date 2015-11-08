@@ -24,6 +24,10 @@
     BOOL resus;
     BOOL doctors;
     
+    //feature content
+    UIImageView *featureImage;
+    
+    
     //test result
     BOOL resusYes;
     BOOL doctorsYes;
@@ -40,6 +44,7 @@
 @property (nonatomic, retain) NSString *testString;
 @property (nonatomic) BOOL resus;
 @property (nonatomic) BOOL doctors;
+@property (nonatomic, retain) IBOutlet UIImageView *featureImage;
 @property (nonatomic) BOOL resusYes;
 @property (nonatomic) BOOL doctorsYes;
 

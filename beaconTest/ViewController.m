@@ -10,6 +10,7 @@
 #import "InductionViewController.h"
 #import "HotspotViewController.h"
 #import "MapViewController.h"
+#import "InfoViewController.h"
 #import <EstimoteSDK/EstimoteSDK.h>
 #import "beaconTest-Swift.h"
 
@@ -25,7 +26,7 @@
 @end
 
 @implementation ViewController
-@synthesize induce;
+@synthesize induce, info;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -62,6 +63,15 @@
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"] identifier:@"ranged region"];
     [self.beaconManager requestAlwaysAuthorization];
     
+    UIBarButtonItem *resetButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close.png"] style:UIBarButtonItemStylePlain target:self action:@selector(clearHistory)];
+    self.navigationItem.rightBarButtonItem = resetButton;
+
+}
+
+-(void)clearHistory {
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
 }
 
@@ -128,6 +138,11 @@
         InductionViewController *induction = [segue destinationViewController];
 //        induction.testLength = 5;
         induction.navigationItem.title = @"Induction";
+    }
+    
+    if (sender == info) {
+        InfoViewController *infom = [segue destinationViewController];
+        infom.navigationItem.title = @"Information";
     }
 /*    else if (sender == anotherButton) {
         HotspotViewController *hot = [segue destinationViewController];

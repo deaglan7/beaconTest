@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -72,6 +71,9 @@
                                 <state key="normal" image="info2.png">
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="lMh-Fb-eU5" kind="show" id="4ys-Tf-2ng"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa2-li-AFg">
                                 <rect key="frame" x="20" y="494" width="90" height="90"/>
@@ -116,22 +118,12 @@
                             <constraint firstAttribute="top" secondItem="d6p-Ph-Yft" secondAttribute="bottom" constant="43" id="x0C-DY-0rF"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="RKL-Gk-BUZ"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="1mY-cb-YEf">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="organize" id="c5A-eg-bjx">
-                                <color key="tintColor" red="1" green="0.0" blue="0.03079350443" alpha="1" colorSpace="calibratedRGB"/>
-                            </barButtonItem>
-                            <barButtonItem title="3" id="bQX-7S-P0D">
-                                <color key="tintColor" red="1" green="0.0" blue="0.03079350443" alpha="1" colorSpace="calibratedRGB"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="1mY-cb-YEf"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="induce" destination="Vl4-lq-A1H" id="5rX-OA-kAy"/>
+                        <outlet property="info" destination="O8t-pT-Bcl" id="XdF-wK-0DY"/>
                         <outlet property="statusLabel" destination="d6p-Ph-Yft" id="UPu-u2-Q7w"/>
                         <outlet property="wardLabel" destination="u2T-ZZ-3qk" id="RHA-QX-h9F"/>
                         <segue destination="dA1-Uk-Bko" kind="show" id="qdV-0V-COe"/>
@@ -153,8 +145,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estimote map 3.png" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-Ne-BP4">
-                                <rect key="frame" x="-22" y="130" width="622" height="533"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map view.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-Ne-BP4">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-gt-Oki">
@@ -195,7 +187,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7Z-lw-sQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="819"/>
+            <point key="canvasLocation" x="-274.5" y="1014.5"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="51t-Ur-bac">
+            <objects>
+                <viewController id="lMh-Fb-eU5" customClass="InfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lpw-hf-SWO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aps-oW-jmC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gqi-xR-0zv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-VM-zoI">
+                                <rect key="frame" x="20" y="237" width="89" height="90"/>
+                                <animations/>
+                                <state key="normal" image="Female toilet.png"/>
+                                <connections>
+                                    <segue destination="dA1-Uk-Bko" kind="show" id="Zsd-DE-GNW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0f4-kh-f0m">
+                                <rect key="frame" x="266" y="237" width="89" height="90"/>
+                                <animations/>
+                                <state key="normal" image="male toilet.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzp-oA-oHO">
+                                <rect key="frame" x="143" y="237" width="89" height="90"/>
+                                <animations/>
+                                <state key="normal" image="Emergency.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJA-Nk-RlQ">
+                                <rect key="frame" x="20" y="380" width="89" height="90"/>
+                                <animations/>
+                                <state key="normal" image="equipment.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1c-Nl-5F4">
+                                <rect key="frame" x="266" y="375" width="89" height="90"/>
+                                <animations/>
+                                <state key="normal" image="Admin.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s6-gP-kcR">
+                                <rect key="frame" x="143" y="375" width="89" height="90"/>
+                                <animations/>
+                                <state key="normal" image="search.png"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info2.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3s-m9-FBz">
+                                <rect key="frame" x="143" y="93" width="90" height="90"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="admin" destination="yJA-Nk-RlQ" id="eg3-mb-RFY"/>
+                        <outlet property="emergancy" destination="fzp-oA-oHO" id="Hty-sS-R8v"/>
+                        <outlet property="equipment" destination="m1c-Nl-5F4" id="Yv9-hV-Bij"/>
+                        <outlet property="femaleToilet" destination="0fg-VM-zoI" id="Wxt-18-P49"/>
+                        <outlet property="maleToilet" destination="0f4-kh-f0m" id="CiU-OA-yui"/>
+                        <outlet property="search" destination="2s6-gP-kcR" id="du9-0Z-N4c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iru-I4-TMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443.5" y="989.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="skM-J0-u2l">
@@ -265,16 +324,87 @@
                                     <segue destination="h8l-Q4-Z05" kind="show" id="ucU-Hc-j2P"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please find the Doctors Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWB-PG-r6s">
+                                <rect key="frame" x="128" y="185" width="227" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4vz-3f-bNg"/>
+                                    <constraint firstAttribute="width" constant="227" id="QUm-2b-LVI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-GE-Pea">
+                                <rect key="frame" x="8" y="185" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fxl-UC-BfH"/>
+                                    <constraint firstAttribute="width" constant="100" id="lbk-LO-vqh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0M-rs-3H0">
+                                <rect key="frame" x="128" y="255" width="227" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="Z1Y-vT-Ked"/>
+                                    <constraint firstAttribute="height" constant="30" id="nKm-cX-rHI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-8G-58m">
+                                <rect key="frame" x="309" y="220" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="h8l-Q4-Z05" kind="show" id="y8w-PJ-SZF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please find the Doctors Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iom-5H-VPS">
+                                <rect key="frame" x="10" y="293" width="345" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="8qw-G9-xSN"/>
+                                    <constraint firstAttribute="height" constant="30" id="DKv-3K-RWF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9KH-fU-ya3">
+                                <rect key="frame" x="10" y="331" width="345" height="174"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Y5U-xY-xWt"/>
+                                    <constraint firstAttribute="height" constant="100" id="tGl-Bb-Cjt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Iom-5H-VPS" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="-10" id="0fi-db-goc"/>
+                            <constraint firstItem="4Od-GE-Pea" firstAttribute="top" secondItem="z6h-3v-dUR" secondAttribute="bottom" constant="8" id="0yW-tM-AA3"/>
+                            <constraint firstItem="S0M-rs-3H0" firstAttribute="leading" secondItem="4Od-GE-Pea" secondAttribute="trailing" constant="10" id="1vl-NM-JBz"/>
+                            <constraint firstItem="NWB-PG-r6s" firstAttribute="leading" secondItem="4Od-GE-Pea" secondAttribute="trailing" constant="10" id="4RR-Mr-f8g"/>
                             <constraint firstItem="iQx-sD-q8p" firstAttribute="top" secondItem="utk-xc-Dc2" secondAttribute="bottom" constant="40" id="4er-tN-47w"/>
                             <constraint firstItem="z6h-3v-dUR" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="10" id="5Te-SD-dJj"/>
+                            <constraint firstItem="9KH-fU-ya3" firstAttribute="top" secondItem="Iom-5H-VPS" secondAttribute="bottom" constant="8" id="6Ip-kf-gEC"/>
+                            <constraint firstItem="9KH-fU-ya3" firstAttribute="top" secondItem="Iom-5H-VPS" secondAttribute="bottom" constant="8" id="B7g-c0-N1r"/>
+                            <constraint firstItem="XAn-12-CWf" firstAttribute="top" secondItem="9KH-fU-ya3" secondAttribute="bottom" constant="118" id="B8w-sJ-vKq"/>
+                            <constraint firstItem="4Od-GE-Pea" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="10" id="CPs-2W-30e"/>
+                            <constraint firstItem="9KH-fU-ya3" firstAttribute="trailing" secondItem="onO-kR-oQD" secondAttribute="trailingMargin" id="KQ4-m7-pXR"/>
                             <constraint firstItem="z6h-3v-dUR" firstAttribute="top" secondItem="oku-aI-UI8" secondAttribute="bottom" constant="10" id="UvG-SW-Zfh"/>
                             <constraint firstItem="iQx-sD-q8p" firstAttribute="leading" secondItem="z6h-3v-dUR" secondAttribute="trailing" constant="10" id="WlQ-AL-pas"/>
+                            <constraint firstItem="Iom-5H-VPS" firstAttribute="leading" secondItem="9KH-fU-ya3" secondAttribute="trailing" constant="10" id="Wyv-Ch-W7R"/>
+                            <constraint firstItem="9KH-fU-ya3" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="-10" id="dVv-3m-Zjk"/>
+                            <constraint firstItem="Iom-5H-VPS" firstAttribute="trailing" secondItem="onO-kR-oQD" secondAttribute="trailingMargin" id="ieU-og-Afb"/>
+                            <constraint firstItem="Iom-5H-VPS" firstAttribute="top" secondItem="S0M-rs-3H0" secondAttribute="bottom" constant="8" id="n1Q-7P-Gau"/>
                             <constraint firstItem="utk-xc-Dc2" firstAttribute="top" secondItem="oku-aI-UI8" secondAttribute="bottom" constant="10" id="qzs-at-zp5"/>
                             <constraint firstItem="utk-xc-Dc2" firstAttribute="leading" secondItem="z6h-3v-dUR" secondAttribute="trailing" constant="10" id="utv-Fr-vAk"/>
+                            <constraint firstItem="S0M-rs-3H0" firstAttribute="top" secondItem="NWB-PG-r6s" secondAttribute="bottom" constant="40" id="zgo-Ti-G5h"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -283,6 +413,12 @@
                         <outlet property="firstTaskCheck" destination="z6h-3v-dUR" id="JsD-u3-nCv"/>
                         <outlet property="firstTaskDistance" destination="iQx-sD-q8p" id="zR5-Fn-6nI"/>
                         <outlet property="firstTaskLabel" destination="utk-xc-Dc2" id="KXN-38-Zbc"/>
+                        <outlet property="secondNextButton" destination="4Od-8G-58m" id="kUp-6C-eh0"/>
+                        <outlet property="secondTaskCheck" destination="4Od-GE-Pea" id="Abr-bg-jqu"/>
+                        <outlet property="secondTaskDistance" destination="S0M-rs-3H0" id="Ypp-7d-nK8"/>
+                        <outlet property="secondTaskLabel" destination="NWB-PG-r6s" id="HsA-n0-9zP"/>
+                        <outlet property="thirdTaskCheck" destination="9KH-fU-ya3" id="V53-J0-ENt"/>
+                        <outlet property="thirdTaskLabel" destination="Iom-5H-VPS" id="vsR-Ax-7PN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svV-a1-w24" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -323,7 +459,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dv9-VW-wNN">
                                 <rect key="frame" x="20" y="558" width="335" height="89"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where's wally?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56R-x3-GgE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where's the LMA?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56R-x3-GgE">
                                         <rect key="frame" x="8" y="8" width="319" height="37"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -377,6 +513,7 @@
                         <outlet property="button1" destination="3go-Ot-eez" id="aQJ-l5-oPq"/>
                         <outlet property="button2" destination="OBI-tb-VH8" id="Xb8-AI-vZB"/>
                         <outlet property="button3" destination="AOk-3T-fR6" id="ran-pL-RrY"/>
+                        <outlet property="featureImage" destination="Ek4-aU-3Ao" id="CE4-AR-Yll"/>
                         <outlet property="testLabel" destination="56R-x3-GgE" id="YkA-wD-8XR"/>
                         <outlet property="testView" destination="Dv9-VW-wNN" id="B5n-kS-8Ac"/>
                     </connections>
@@ -389,11 +526,20 @@
     <resources>
         <image name="Admin.png" width="291" height="137"/>
         <image name="Critical.png" width="90" height="90"/>
+        <image name="Emergency.png" width="99" height="94"/>
+        <image name="Female toilet.png" width="35" height="90"/>
         <image name="Jane.png" width="175" height="198"/>
         <image name="Location Pin.png" width="97" height="97"/>
         <image name="equipment.png" width="141" height="132"/>
         <image name="estimote map 3.png" width="630" height="651"/>
         <image name="info2.png" width="103" height="126"/>
         <image name="lightbulb.png" width="82" height="134"/>
+        <image name="male toilet.png" width="34" height="90"/>
+        <image name="map view.jpg" width="2535" height="1651"/>
+        <image name="search.png" width="78" height="77"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qdV-0V-COe"/>
+        <segue reference="y8w-PJ-SZF"/>
+    </inferredMetricsTieBreakers>
 </document>

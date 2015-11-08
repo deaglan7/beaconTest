@@ -12,7 +12,9 @@
 {
 //here we are
     UIButton *induce;
+    UIButton *info;
 }
 @property (nonatomic, retain) IBOutlet UIButton *induce;
+@property (nonatomic, retain) IBOutlet UIButton *info;
 @end
 

@@ -14,7 +14,7 @@
 
 @implementation InductionViewController
 @synthesize firstTaskCheck, firstTaskLabel, firstTaskDistance, firstNextButton;
-@synthesize secondTaskCheck, secondTaskLabel, secondTaskDistance;
+@synthesize secondTaskCheck, secondTaskLabel, secondTaskDistance, secondNextButton;
 @synthesize thirdTaskCheck, thirdTaskLabel;
 @synthesize beaconManager, beaconRegion, placesByBeacons;
 
@@ -24,15 +24,15 @@
     
     //hide the second and third labels and images
     firstNextButton.hidden = TRUE;
+    
     secondTaskLabel.hidden = TRUE;
     secondTaskCheck.hidden = TRUE;
+    secondNextButton.hidden = TRUE;
+    secondTaskDistance.hidden = TRUE;
+    
     thirdTaskLabel.hidden = TRUE;
     thirdTaskCheck.hidden = TRUE;
     
-    //populate the first image and label
-    self.firstTaskLabel.text = @"Please find the Resus Trolley";
-    self.firstTaskCheck.image = [UIImage imageNamed:@"Jane.png"];
-    self.firstTaskDistance.text = @"locating...";
     
     self.placesByBeacons = @{@"53111:27862": @{@"Resus": @1, //read as: it's 50 meters from "Heavenly Sandwiches" to beacon with major 6754 adn minor 54361
                                                @"Toilet": @5,
@@ -59,11 +59,63 @@
     [self.beaconManager requestAlwaysAuthorization];
     
     
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
+    
+    //see if the test has been done before
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *induced = [defaults stringForKey:@"InductionResult"];
+    NSString *resused = [defaults stringForKey:@"ResusResult"];
+    NSString *doctors = [defaults stringForKey:@"DoctorsResult"];
+    
+    
+    
+    
+    //populate the first image and label
+    if (!resused) {
+    self.firstTaskLabel.text = @"Please find the Resus Trolley";
+    self.firstTaskCheck.image = [UIImage imageNamed:@"Jane.png"];
+    self.firstTaskDistance.text = @"locating...";
+    }
+    else if (resused) {
+        //if Resus test complete, give some feedback
+        self.firstTaskLabel.text = @"You've found the Resus Trolley";
+        self.firstTaskCheck.image = [UIImage imageNamed:@"Jane.png"];
+        self.firstTaskDistance.text = @"Complete";
+    }
+    if (resused && !doctors) {
+        //if Resus complete, but Doctors Room outstanding, show task
+        secondTaskDistance.hidden = FALSE;
+        secondTaskLabel.hidden = FALSE;
+        secondTaskDistance.hidden = FALSE;
+        
+        self.secondTaskLabel.text = @"Please find the Doctors Room";
+        self.secondTaskCheck.image = [UIImage imageNamed:@"doctorRoom1.jpg"];
+        self.secondTaskDistance.text = @"locating...";
+    }
+    if (doctors) {
+        //if Doctors Room complete, give some feedback
+        secondTaskDistance.hidden = FALSE;
+        secondTaskLabel.hidden = FALSE;
+        secondTaskDistance.hidden = FALSE;
+        
+        self.secondTaskLabel.text = @"You found the Doctors Room";
+        self.secondTaskCheck.image = [UIImage imageNamed:@"doctorRoom2.jpg"];
+        self.secondTaskDistance.text = @"Complete";
+    }
+    if (induced) {
+        self.firstNextButton.hidden = TRUE;
+        self.secondNextButton.hidden = TRUE;
+        self.thirdTaskLabel.text = @"You have been induced!";
+        self.thirdTaskCheck.image = [UIImage imageNamed:@"compass.jpg"];
+        self.thirdTaskCheck.hidden = false;
+        self.thirdTaskCheck.hidden = false;
+    }
+    
 }
 
 -(void) viewDidDisappear:(BOOL)animated {
@@ -105,14 +157,30 @@
     if (nearestBeacon.major.intValue == 53111) {
         if (nearestBeacon.proximity >= CLProximityFar) {
         //NSLog(@"nearestBeacon.major invalue == 53111");
-            self.firstTaskDistance.text = [NSString stringWithFormat:@"Distance %0.2f m", nearestBeacon.accuracy];}
+            self.firstTaskDistance.text = [NSString stringWithFormat:@"Distance %0.2f m", nearestBeacon.accuracy];
+            firstNextButton.hidden = TRUE;
+        }
         else if (nearestBeacon.proximity == CLProximityNear) {
             self.firstTaskDistance.text = @"Located";
-            
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
             //do something to suggest the feature is there
             firstNextButton.hidden=FALSE;
             
         }
+    }
+        if (nearestBeacon.major.intValue == 47967) {
+            if (nearestBeacon.proximity >= CLProximityFar) {
+                //NSLog(@"nearestBeacon.major invalue == 53111");
+                self.secondTaskDistance.text = [NSString stringWithFormat:@"Distance %0.2f m", nearestBeacon.accuracy];
+                secondNextButton.hidden=TRUE;
+            }
+            else if (nearestBeacon.proximity == CLProximityNear) {
+                self.secondTaskDistance.text = @"Located";
+                
+                //do something to suggest the feature is there
+                secondNextButton.hidden=FALSE;
+                
+            }
     }
     else if (nearestBeacon.proximity >= CLProximityFar) {
 //        self.wardLabel.text = @"Somewhere else";
@@ -147,12 +215,17 @@
         first.resus = TRUE;
         first.doctors = FALSE;
     }
-    /*    else if (sender == anotherButton) {
-     HotspotViewController *hot = [segue destinationViewController];
+       else if (sender == secondNextButton) {
+     HotspotViewController *doctor  = [segue destinationViewController];
      //        hot.testLength = 10;
-     hot.navigationItem.title = @"Upper Body";
+     doctor.navigationItem.title = @"Doctors";
+           doctor.featureImage.image = [UIImage imageNamed:@"doctorRoom1.jpg"];
+           doctor.induction = TRUE;
+           doctor.resus = FALSE;
+           doctor.doctors = TRUE;
      
      }
+     /*
      else if (sender == aDifferentButton) {
      MapViewController *map = [segue destinationViewController];
      //        map.testLength = 35;

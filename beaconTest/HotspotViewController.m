@@ -16,6 +16,7 @@
 @synthesize induction, testView, testLabel, button1, button2, button3;
 @synthesize testString;
 @synthesize resus, doctors;
+@synthesize featureImage;
 @synthesize resusYes, doctorsYes;
 
 - (void)viewDidLoad {
@@ -24,16 +25,44 @@
     testView.hidden = TRUE;
     resusYes = FALSE;
     doctorsYes = FALSE;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSString *induced = [defaults stringForKey:@"InductionResult"];
+    NSString *alreadyResus = [defaults stringForKey:@"ResusResult"];
+    NSString *alreadyDoc = [defaults stringForKey:@"DoctorsResult"];
+    if ([alreadyResus isEqualToString:@"yes"]) {
+        resusYes = TRUE;
+    }
+    if ([alreadyDoc isEqualToString:@"yes"]) {
+        doctorsYes = TRUE;
+    }
+    
     
     if (induction) {
         NSLog(@"we are in an induction");
         testView.hidden = FALSE;
+        if (resus) {
+            testLabel.text = @"where is the LMA?";
+        }
+        else if (doctors)
+        {
+            testLabel.text = @"where is the Bleep directory?";
+        }
     }
     
     
     
     
+    
+    
 }
+
+-(void) viewDidAppear:(BOOL)animated {
+    self.navigationItem.hidesBackButton = YES;
+    
+    //which question
+    
+}
+
 
 - (IBAction) buttonPressed:(id)sender {
     //Start the questions
@@ -44,6 +73,7 @@
             //congrats
             self.testLabel.text = @"Well Done";
             resusYes = TRUE;
+            self.navigationItem.hidesBackButton = NO;
         }
         else {
             //hard luck
@@ -55,12 +85,30 @@
     if (doctors) {
         if (sender == button1) {
             //congrats
-            
+            self.testLabel.text = @"Well Done";
+            doctorsYes = TRUE;
+            self.navigationItem.hidesBackButton = NO;
         }
         else {
             //hard luck
+            testLabel.text = @"Sorry, try again";
+            [self performSelector:@selector(hideQ) withObject:testLabel afterDelay:2.0];
+            doctorsYes = FALSE;
         }
     }
+    
+    //store the result
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (resusYes) {
+        [defaults setObject:@"yes" forKey:@"ResusResult"];
+    }
+    else if (doctorsYes) {
+        [defaults setObject:@"yes" forKey:@"DoctorsResult"];
+    }
+    if (resusYes && doctorsYes) {
+        [defaults setObject:@"yes" forKey:@"InductionResult"];
+    }
+    [defaults synchronize];
 }
 
 
