@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -111,7 +112,7 @@
         <!--Induction View Controller-->
         <scene sceneID="4FH-b2-09C">
             <objects>
-                <viewController id="Np3-uI-bS0" customClass="inductionViewController" sceneMemberID="viewController">
+                <viewController id="Np3-uI-bS0" customClass="InductionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oku-aI-UI8"/>
                         <viewControllerLayoutGuide type="bottom" id="XAn-12-CWf"/>
@@ -119,10 +120,53 @@
                     <view key="view" contentMode="scaleToFill" id="onO-kR-oQD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utk-xc-Dc2">
+                                <rect key="frame" x="178" y="77" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2lT-ZE-gkq"/>
+                                    <constraint firstAttribute="width" constant="200" id="N5r-2e-JW9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6h-3v-dUR">
+                                <rect key="frame" x="10" y="77" width="150" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ejT-7t-8Te"/>
+                                    <constraint firstAttribute="height" constant="150" id="fiF-Uh-MJP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQx-sD-q8p">
+                                <rect key="frame" x="178" y="197" width="131" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="e04-Mj-rRx"/>
+                                    <constraint firstAttribute="height" constant="30" id="wQI-dE-dVO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iQx-sD-q8p" firstAttribute="top" secondItem="utk-xc-Dc2" secondAttribute="bottom" constant="90" id="4er-tN-47w"/>
+                            <constraint firstItem="z6h-3v-dUR" firstAttribute="leading" secondItem="onO-kR-oQD" secondAttribute="leadingMargin" constant="10" id="5Te-SD-dJj"/>
+                            <constraint firstItem="z6h-3v-dUR" firstAttribute="top" secondItem="oku-aI-UI8" secondAttribute="bottom" constant="10" id="UvG-SW-Zfh"/>
+                            <constraint firstItem="iQx-sD-q8p" firstAttribute="leading" secondItem="z6h-3v-dUR" secondAttribute="trailing" constant="18" id="WlQ-AL-pas"/>
+                            <constraint firstItem="utk-xc-Dc2" firstAttribute="top" secondItem="oku-aI-UI8" secondAttribute="bottom" constant="10" id="qzs-at-zp5"/>
+                            <constraint firstItem="utk-xc-Dc2" firstAttribute="leading" secondItem="z6h-3v-dUR" secondAttribute="trailing" constant="10" id="utv-Fr-vAk"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstTaskCheck" destination="z6h-3v-dUR" id="JsD-u3-nCv"/>
+                        <outlet property="firstTaskDistance" destination="iQx-sD-q8p" id="zR5-Fn-6nI"/>
+                        <outlet property="firstTaskLabel" destination="utk-xc-Dc2" id="KXN-38-Zbc"/>
                         <segue destination="h8l-Q4-Z05" kind="show" id="FfC-9D-eb1"/>
                     </connections>
                 </viewController>

@@ -13,10 +13,25 @@
 @end
 
 @implementation InductionViewController
+@synthesize firstTaskCheck, firstTaskLabel, firstTaskDistance;
+@synthesize secondTaskCheck, secondTaskLabel, secondTaskDistance;
+@synthesize thirdTaskCheck, thirdTaskLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //hide the second and third labels and images
+    secondTaskLabel.hidden = TRUE;
+    secondTaskCheck.hidden = TRUE;
+    thirdTaskLabel.hidden = TRUE;
+    thirdTaskCheck.hidden = TRUE;
+    
+    //populate the first image and label
+    self.firstTaskLabel.text = @"Please find the Resus Trolley";
+    self.firstTaskCheck.image = [UIImage imageNamed:@"resus.jpg"];
+    self.firstTaskDistance.text = @"locating...";
+    
 }
 
 - (void)didReceiveMemoryWarning {
