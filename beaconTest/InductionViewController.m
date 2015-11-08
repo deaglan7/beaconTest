@@ -13,7 +13,7 @@
 @end
 
 @implementation InductionViewController
-@synthesize firstTaskCheck, firstTaskLabel, firstTaskDistance;
+@synthesize firstTaskCheck, firstTaskLabel, firstTaskDistance, firstNextButton;
 @synthesize secondTaskCheck, secondTaskLabel, secondTaskDistance;
 @synthesize thirdTaskCheck, thirdTaskLabel;
 @synthesize beaconManager, beaconRegion, placesByBeacons;
@@ -23,6 +23,7 @@
     // Do any additional setup after loading the view.
     
     //hide the second and third labels and images
+    firstNextButton.hidden = TRUE;
     secondTaskLabel.hidden = TRUE;
     secondTaskCheck.hidden = TRUE;
     thirdTaskLabel.hidden = TRUE;
@@ -107,7 +108,10 @@
             self.firstTaskDistance.text = [NSString stringWithFormat:@"Distance %0.2f m", nearestBeacon.accuracy];}
         else if (nearestBeacon.proximity == CLProximityNear) {
             self.firstTaskDistance.text = @"Located";
-            NSLog(@"located");
+            
+            //do something to suggest the feature is there
+            firstNextButton.hidden=FALSE;
+            
         }
     }
     else if (nearestBeacon.proximity >= CLProximityFar) {
@@ -126,6 +130,33 @@
 //        self.statusLabel.text = @"scanning...";
     }
     
+}
+#pragma mark handle navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    
+    
+    if (sender == firstNextButton) {
+        HotspotViewController *first = [segue destinationViewController];
+        //        induction.testLength = 5;
+        first.navigationItem.title = @"Resus";
+    }
+    /*    else if (sender == anotherButton) {
+     HotspotViewController *hot = [segue destinationViewController];
+     //        hot.testLength = 10;
+     hot.navigationItem.title = @"Upper Body";
+     
+     }
+     else if (sender == aDifferentButton) {
+     MapViewController *map = [segue destinationViewController];
+     //        map.testLength = 35;
+     map.navigationItem.title = @"Chest/Abdomen";
+     
+     }
+     */
 }
 
 
