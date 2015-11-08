@@ -83,10 +83,16 @@
 -(void)beaconManager:(id)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region {
     CLBeacon *nearestBeacon = beacons.firstObject;
     
-    if (nearestBeacon) {
+    if (nearestBeacon.proximity <= CLProximityFar) {
         self.wardLabel.text = @"Psych Ward!!!";
     }
-    if(nearestBeacon.proximity == CLProximityImmediate) {
+    else if (nearestBeacon.proximity >= CLProximityFar) {
+        self.wardLabel.text = @"Somewhere else";
+    }
+    else if (nearestBeacon.proximity == CLProximityUnknown) {
+        self.wardLabel.text = @"Proximity Unknown";
+    }
+    if(nearestBeacon.proximity == CLProximityNear) {
         NSArray *places = [self placesNearBeacon:nearestBeacon];
         //Update the UI here
         self.statusLabel.text = [places objectAtIndex:0];
