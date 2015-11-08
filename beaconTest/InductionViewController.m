@@ -143,6 +143,9 @@
         HotspotViewController *first = [segue destinationViewController];
         //        induction.testLength = 5;
         first.navigationItem.title = @"Resus";
+        first.induction = TRUE;
+        first.resus = TRUE;
+        first.doctors = FALSE;
     }
     /*    else if (sender == anotherButton) {
      HotspotViewController *hot = [segue destinationViewController];

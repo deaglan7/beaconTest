@@ -320,6 +320,44 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dv9-VW-wNN">
+                                <rect key="frame" x="20" y="558" width="335" height="89"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where's wally?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56R-x3-GgE">
+                                        <rect key="frame" x="8" y="8" width="319" height="37"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3go-Ot-eez">
+                                        <rect key="frame" x="8" y="53" width="75" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Drawer 1"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="h8l-Q4-Z05" eventType="touchUpInside" id="2zX-WR-iGh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBI-tb-VH8">
+                                        <rect key="frame" x="130" y="53" width="75" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Drawer 2"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="h8l-Q4-Z05" eventType="touchUpInside" id="7No-wC-uy9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOk-3T-fR6">
+                                        <rect key="frame" x="252" y="53" width="75" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Drawer 3"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="h8l-Q4-Z05" eventType="touchUpInside" id="wCN-1q-acj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -329,18 +367,19 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Done" id="IaL-aV-4my"/>
-                        <barButtonItem title="True" width="213" style="plain" id="2dp-YO-qPC">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                        <barButtonItem title="False" width="141" style="plain" id="6Oa-En-7La">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                         <barButtonItem title="Flag for review" width="164" id="8f7-jj-nGN">
                             <color key="tintColor" red="1" green="0.0" blue="0.030793504433242802" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="button1" destination="3go-Ot-eez" id="aQJ-l5-oPq"/>
+                        <outlet property="button2" destination="OBI-tb-VH8" id="Xb8-AI-vZB"/>
+                        <outlet property="button3" destination="AOk-3T-fR6" id="ran-pL-RrY"/>
+                        <outlet property="testLabel" destination="56R-x3-GgE" id="YkA-wD-8XR"/>
+                        <outlet property="testView" destination="Dv9-VW-wNN" id="B5n-kS-8Ac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZ3-FS-oAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
