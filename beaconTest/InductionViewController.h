@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <EstimoteSDK/EstimoteSDK.h>
+#import "HotspotViewController.h"
 
 
 @interface InductionViewController : UIViewController <ESTBeaconManagerDelegate>
@@ -15,6 +16,7 @@
     UIImageView *firstTaskCheck;
     UILabel *firstTaskLabel;
     UILabel *firstTaskDistance;
+    UIButton *fristNextButton;
     UIImageView *secondTaskCheck;
        UILabel *secondTaskLabel;
     UILabel *secondTaskDistance;
@@ -28,6 +30,7 @@
 @property (nonatomic, retain) IBOutlet UIImageView *firstTaskCheck;
 @property (nonatomic, retain) IBOutlet UILabel *firstTaskLabel;
 @property (nonatomic, retain) IBOutlet UILabel *firstTaskDistance;
+@property (nonatomic, retain) IBOutlet UIButton *firstNextButton;
 @property (nonatomic, retain) IBOutlet UIImageView *secondTaskCheck;
 @property (nonatomic, retain) IBOutlet UILabel *secondTaskLabel;
 @property (nonatomic, retain) IBOutlet UILabel *secondTaskDistance;

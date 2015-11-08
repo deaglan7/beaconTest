@@ -96,7 +96,7 @@
     CLBeacon *nearestBeacon = beacons.firstObject;
     
     if (nearestBeacon.proximity <= CLProximityFar) {
-        self.wardLabel.text = @"Psych Ward!!!";
+        self.wardLabel.text = @"Addison Ward";
     }
     else if (nearestBeacon.proximity >= CLProximityFar) {
         self.wardLabel.text = @"Somewhere else";

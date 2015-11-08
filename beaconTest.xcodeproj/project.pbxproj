@@ -34,6 +34,7 @@
 		80C0A5531BEE63DB00842CC2 /* beaconTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A5521BEE63DB00842CC2 /* beaconTestTests.m */; };
 		80C0A55E1BEE63DB00842CC2 /* beaconTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A55D1BEE63DB00842CC2 /* beaconTestUITests.m */; };
 		80C0A56D1BEE63E700842CC2 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C0A56C1BEE63E700842CC2 /* EstimoteSDK.framework */; };
+		80E8BA611BEF33F9000214B4 /* estimote map 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 80E8BA601BEF33F9000214B4 /* estimote map 3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		80C0A55D1BEE63DB00842CC2 /* beaconTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beaconTestUITests.m; sourceTree = "<group>"; };
 		80C0A55F1BEE63DB00842CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80C0A56C1BEE63E700842CC2 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		80E8BA601BEF33F9000214B4 /* estimote map 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "estimote map 3.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,7 @@
 		8091D3E21BEEDA4800E411CD /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				0AD426781BEEF12E002ED520 /* estimote map 3.png */,
+				80E8BA601BEF33F9000214B4 /* estimote map 3.png */,
 				8091D3EB1BEEDA6700E411CD /* Admin.png */,
 				8091D3EC1BEEDA6700E411CD /* Critical.png */,
 				8091D3ED1BEEDA6700E411CD /* Female toilet.png */,
@@ -339,7 +341,7 @@
 				8091D3FA1BEEDA6700E411CD /* info2.png in Resources */,
 				8091D3FB1BEEDA6700E411CD /* lightbulb.png in Resources */,
 				8091D3F61BEEDA6700E411CD /* Female toilet.png in Resources */,
-				0AD426791BEEF12E002ED520 /* estimote map 3.png in Resources */,
+				80E8BA611BEF33F9000214B4 /* estimote map 3.png in Resources */,
 				8091D3FC1BEEDA6700E411CD /* Emergency.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
