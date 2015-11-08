@@ -61,6 +61,8 @@
     
     [self resetButtons];
     
+    self.descLabel.text = @"Select a hotspot on map!";
+    
     //Diabled all buttons
     if (nearestBeacon.major.intValue == 53111) {
         self.currentLabel.text = @"Resuscitation Trolley";
@@ -125,16 +127,19 @@
     
     if(sender == h1Button)
     {
+        self.currentLabel.text = @"Resuscitation Trolley";
         self.descLabel.text = @"The resuscitation trolley is kept here.";
     }
     
     if(sender == h2Button)
     {
+        self.currentLabel.text = @"Toilet";
         self.descLabel.text = @"The code for the toilet is 1234.";
     }
     
     if(sender == h3Button)
     {
+                self.currentLabel.text = @"Doctor's Office";
         self.descLabel.text = @"The doctors rooms is near the entrance.";
     }
     
