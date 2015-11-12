@@ -63,8 +63,23 @@
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"] identifier:@"ranged region"];
     [self.beaconManager requestAlwaysAuthorization];
     
-    UIBarButtonItem *resetButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close.png"] style:UIBarButtonItemStylePlain target:self action:@selector(clearHistory)];
-    self.navigationItem.rightBarButtonItem = resetButton;
+//    UIBarButtonItem *resetButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close.png"] style:UIBarButtonItemStylePlain target:self action:@selector(clearHistory)];
+    UIButton *settings = [UIButton buttonWithType:UIButtonTypeCustom];
+    [settings setImage:[UIImage imageNamed:@"Settings.png"] forState:UIControlStateNormal];
+    [settings addTarget:self action:@selector(launchSettings) forControlEvents:UIControlEventTouchUpInside];
+    [settings setFrame:CGRectMake(0, 0, 30, 30)];
+    UIBarButtonItem *setButton = [[UIBarButtonItem alloc] initWithCustomView:settings];
+//    UIBarButtonItem *resetButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close.png"] style:UIBarButtonItemStylePlain target:self action:@selector(launchSettings)];
+
+//    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Settings.png"]]]; //need to define the frame height and width
+//    self.navigationItem.rightBarButtonItem = item;
+    self.navigationItem.rightBarButtonItem = setButton;
+
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Echo logo no text.png"]];
+}
+
+-(void)launchSettings {
+    [self performSegueWithIdentifier:@"launchSettings" sender:self];
 
 }
 
@@ -101,12 +116,40 @@
     return sortedPlaces;
 }
 
+-(void) checkInduction {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *induced = [defaults stringForKey:@"InductionResult"];
+    
+    if (!induced) {
+        //not yet induced, launch an alert
+        NSLog(@"not yet induced to this ward");
+        UIAlertController *inductionAlert = [UIAlertController alertControllerWithTitle:@"Would you like to complete induction now?" message:@"You have not completed local induction yet and must do so before you can start working on the ward" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *induceMe = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+             //do something here
+            [self performSegueWithIdentifier:@"inducer" sender:induce];
+            [inductionAlert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        UIAlertAction *cancelMe = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+            [inductionAlert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [inductionAlert addAction:induceMe];
+        [inductionAlert addAction:cancelMe];
+        [self presentViewController:inductionAlert animated:YES completion:nil];
+    }
+    
+}
+
+- (void)inducer {
+    //does this handle the UIAlertAction? how?
+}
+
 
 -(void)beaconManager:(id)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region {
     CLBeacon *nearestBeacon = beacons.firstObject;
     
     if (nearestBeacon.proximity <= CLProximityFar) {
         self.wardLabel.text = @"Addison Ward";
+        [self checkInduction];
     }
     else if (nearestBeacon.proximity >= CLProximityFar) {
         self.wardLabel.text = @"Somewhere else";
@@ -114,6 +157,8 @@
     else if (nearestBeacon.proximity == CLProximityUnknown) {
         self.wardLabel.text = @"Proximity Unknown";
     }
+/*  not interested in updating label on front screen now
+ 
     if(nearestBeacon.proximity == CLProximityNear) {
         NSArray *places = [self placesNearBeacon:nearestBeacon];
         //Update the UI here
@@ -123,7 +168,7 @@
         else if (nearestBeacon.proximity >= CLProximityNear) {
             self.statusLabel.text = @"scanning...";
         }
-    
+*/
 }
 
 #pragma mark handle navigation
@@ -137,7 +182,7 @@
     if (sender == induce) {
         InductionViewController *induction = [segue destinationViewController];
 //        induction.testLength = 5;
-        induction.navigationItem.title = @"Induction";
+        induction.navigationItem.title = @"Local Induction";
     }
     
     if (sender == info) {

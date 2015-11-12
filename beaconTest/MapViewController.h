@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <EstimoteSDK/EstimoteSDK.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface MapViewController : UIViewController <ESTBeaconManagerDelegate>
 {
@@ -17,6 +18,7 @@
     UIButton *h1Button;
     UIButton *h2Button;
     UIButton *h3Button;
+    int silence;
 
 ESTBeaconManager *beaconManager;
         CLBeaconRegion *region;
@@ -24,7 +26,7 @@ ESTBeaconManager *beaconManager;
 
 @property (nonatomic) ESTBeaconManager *beaconManager;
 @property (nonatomic) CLBeaconRegion *beaconRegion;
-
+@property (nonatomic) int silence;
 @property (nonatomic, retain) IBOutlet UILabel *currentLabel;
 @property (nonatomic, retain) IBOutlet UILabel *meLabel;
 @property (nonatomic, retain) IBOutlet UILabel *descLabel;

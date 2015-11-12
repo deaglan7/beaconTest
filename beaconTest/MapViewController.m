@@ -46,6 +46,7 @@
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
+    self.silence = 0;
 }
 
 -(void) viewDidDisappear:(BOOL)animated {
@@ -63,20 +64,49 @@
     
     self.descLabel.text = @"Select a hotspot on map!";
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *firstPreviousString = [defaults stringForKey:@"firstBeaconMajor"];
+    NSString *secondPreviousString = [defaults stringForKey:@"secondBeaconMajor"];
+    NSString *thirdPreviousString = [defaults stringForKey:@"thirdBeaconMajor"];
+    
+    if (!firstPreviousString) firstPreviousString = @"53111";
+    if (!secondPreviousString) secondPreviousString = @"65397";
+    if (!thirdPreviousString) thirdPreviousString = @"47967";
+
+    
+    
     //Diabled all buttons
-    if (nearestBeacon.major.intValue == 53111) {
+    if (nearestBeacon.major.intValue == firstPreviousString.intValue) {
+    //    if (nearestBeacon.major.intValue == 53111) {
         self.currentLabel.text = @"Resuscitation Trolley";
         self.h1Button.backgroundColor = onColor;
     }
-    if (nearestBeacon.major.intValue == 65397) {
+    
+    if (nearestBeacon.major.intValue == secondPreviousString.intValue) {
+//    if (nearestBeacon.major.intValue == 65397) {
         self.currentLabel.text = @"Toilet";
         self.h2Button.backgroundColor = onColor;
+        
+        //ping if close
+    if (nearestBeacon.proximity == CLProximityNear) {
+        
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                AudioServicesPlaySystemSound(1005);
+        silence++;
+            self.currentLabel.text = @"Toilet code: 12345";
     }
-    if (nearestBeacon.major.intValue == 47967) {
+    }
+    if (nearestBeacon.major.intValue == thirdPreviousString.intValue) {
+        //    if (nearestBeacon.major.intValue == 47967) {
         self.currentLabel.text = @"Doctor's Office";
         self.h3Button.backgroundColor = onColor;
     }
     
+    if (silence > 4) {
+        [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
+        return;
+    }
     //Map range 0-50
     
     //Get location of all beacons

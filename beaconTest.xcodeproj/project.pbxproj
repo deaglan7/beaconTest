@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0AFB6FAC1BEF39CA0069EFDC /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB6FAB1BEF39CA0069EFDC /* LocationService.swift */; };
+		80055A5F1BF1556F006E5831 /* white_eco_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80055A5E1BF1556F006E5831 /* white_eco_icon.png */; };
+		803A50F81BF2A8CB004CECAB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803A50F71BF2A8CB004CECAB /* Launch Screen.storyboard */; };
+		803A50FA1BF2A963004CECAB /* echo launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 803A50F91BF2A963004CECAB /* echo launch.png */; };
 		805830921BEF97E8006BFD5E /* Map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 805830911BEF97E8006BFD5E /* Map.jpg */; };
 		805830941BEF984F006BFD5E /* Crash_Cart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 805830931BEF984F006BFD5E /* Crash_Cart.jpg */; };
 		806A1E9B1BEF5DB600623688 /* compass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A1E9A1BEF5DB600623688 /* compass.jpg */; };
@@ -19,6 +22,7 @@
 		806A1EAF1BEF7A7000623688 /* doctorRoom2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EAD1BEF7A7000623688 /* doctorRoom2.jpg */; };
 		806A1EB11BEF7D9100623688 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EB01BEF7D9100623688 /* close.png */; };
 		806A1EB31BEF818A00623688 /* map view.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A1EB21BEF818A00623688 /* map view.jpg */; };
+		807534731BF4E12900B1BE6B /* devSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807534721BF4E12900B1BE6B /* devSettingsViewController.m */; };
 		8091D3E71BEEDA5E00E411CD /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E31BEEDA5E00E411CD /* search.png */; };
 		8091D3E81BEEDA5E00E411CD /* echo logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E41BEEDA5E00E411CD /* echo logo.png */; };
 		8091D3E91BEEDA5E00E411CD /* equipment.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091D3E51BEEDA5E00E411CD /* equipment.png */; };
@@ -52,6 +56,8 @@
 		80EA96941BEFA7870034D5EA /* info3.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968D1BEFA7870034D5EA /* info3.png */; };
 		80EA96951BEFA7870034D5EA /* lightbulb 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968E1BEFA7870034D5EA /* lightbulb 2.png */; };
 		80EA96961BEFA7870034D5EA /* location pin 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA968F1BEFA7870034D5EA /* location pin 2.png */; };
+		80EA96981BEFAD9A0034D5EA /* Yes@3x copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA96971BEFAD9A0034D5EA /* Yes@3x copy.png */; };
+		80EA969A1BF143260034D5EA /* Echo logo no text.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EA96991BF143260034D5EA /* Echo logo no text.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,9 @@
 /* Begin PBXFileReference section */
 		0AFB6FAA1BEF39C90069EFDC /* beaconTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beaconTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AFB6FAB1BEF39CA0069EFDC /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		80055A5E1BF1556F006E5831 /* white_eco_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_eco_icon.png; sourceTree = "<group>"; };
+		803A50F71BF2A8CB004CECAB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		803A50F91BF2A963004CECAB /* echo launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "echo launch.png"; sourceTree = "<group>"; };
 		805830911BEF97E8006BFD5E /* Map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map.jpg; sourceTree = "<group>"; };
 		805830931BEF984F006BFD5E /* Crash_Cart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Crash_Cart.jpg; sourceTree = "<group>"; };
 		806A1E9A1BEF5DB600623688 /* compass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = compass.jpg; sourceTree = "<group>"; };
@@ -86,6 +95,8 @@
 		806A1EAD1BEF7A7000623688 /* doctorRoom2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doctorRoom2.jpg; sourceTree = "<group>"; };
 		806A1EB01BEF7D9100623688 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		806A1EB21BEF818A00623688 /* map view.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "map view.jpg"; sourceTree = "<group>"; };
+		807534711BF4E12900B1BE6B /* devSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = devSettingsViewController.h; sourceTree = "<group>"; };
+		807534721BF4E12900B1BE6B /* devSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = devSettingsViewController.m; sourceTree = "<group>"; };
 		8091D3E31BEEDA5E00E411CD /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		8091D3E41BEEDA5E00E411CD /* echo logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "echo logo.png"; sourceTree = "<group>"; };
 		8091D3E51BEEDA5E00E411CD /* equipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equipment.png; sourceTree = "<group>"; };
@@ -130,6 +141,8 @@
 		80EA968D1BEFA7870034D5EA /* info3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info3.png; sourceTree = "<group>"; };
 		80EA968E1BEFA7870034D5EA /* lightbulb 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightbulb 2.png"; sourceTree = "<group>"; };
 		80EA968F1BEFA7870034D5EA /* location pin 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location pin 2.png"; sourceTree = "<group>"; };
+		80EA96971BEFAD9A0034D5EA /* Yes@3x copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yes@3x copy.png"; sourceTree = "<group>"; };
+		80EA96991BF143260034D5EA /* Echo logo no text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Echo logo no text.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +174,8 @@
 		806A1EAB1BEF7A6200623688 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				803A50F91BF2A963004CECAB /* echo launch.png */,
+				80EA96971BEFAD9A0034D5EA /* Yes@3x copy.png */,
 				805830931BEF984F006BFD5E /* Crash_Cart.jpg */,
 				806A1EAC1BEF7A7000623688 /* doctorRoom1.jpg */,
 				806A1EAD1BEF7A7000623688 /* doctorRoom2.jpg */,
@@ -173,12 +188,14 @@
 		8091D3E21BEEDA4800E411CD /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				80055A5E1BF1556F006E5831 /* white_eco_icon.png */,
 				80EA96891BEFA7870034D5EA /* admin2.png */,
 				80EA968A1BEFA7870034D5EA /* critical2.png */,
 				80EA968B1BEFA7870034D5EA /* Echo logo final.svg */,
 				80EA968C1BEFA7870034D5EA /* equipment 2.png */,
 				80EA968D1BEFA7870034D5EA /* info3.png */,
 				80EA968E1BEFA7870034D5EA /* lightbulb 2.png */,
+				80EA96991BF143260034D5EA /* Echo logo no text.png */,
 				80EA968F1BEFA7870034D5EA /* location pin 2.png */,
 				806A1EB01BEF7D9100623688 /* close.png */,
 				806A1EA41BEF728C00623688 /* Icon-60@2x.png */,
@@ -238,6 +255,9 @@
 				809A5AB61BEEDCFD004F7647 /* MapViewController.h */,
 				809A5AB71BEEDCFD004F7647 /* MapViewController.m */,
 				80C0A53E1BEE63DB00842CC2 /* Main.storyboard */,
+				807534711BF4E12900B1BE6B /* devSettingsViewController.h */,
+				807534721BF4E12900B1BE6B /* devSettingsViewController.m */,
+				803A50F71BF2A8CB004CECAB /* Launch Screen.storyboard */,
 				806A1EA81BEF733600623688 /* InfoViewController.h */,
 				806A1EA91BEF733600623688 /* InfoViewController.m */,
 				80C0A5441BEE63DB00842CC2 /* Assets.xcassets */,
@@ -353,6 +373,7 @@
 				TargetAttributes = {
 					80C0A5311BEE63DB00842CC2 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 2D2HC25EW9;
 					};
 					80C0A54D1BEE63DB00842CC2 = {
 						CreatedOnToolsVersion = 7.1;
@@ -401,13 +422,16 @@
 				80EA96931BEFA7870034D5EA /* equipment 2.png in Resources */,
 				80C0A5401BEE63DB00842CC2 /* Main.storyboard in Resources */,
 				8091D3F41BEEDA6700E411CD /* Admin.png in Resources */,
+				80055A5F1BF1556F006E5831 /* white_eco_icon.png in Resources */,
 				8091D3F71BEEDA6700E411CD /* male toilet.png in Resources */,
+				803A50FA1BF2A963004CECAB /* echo launch.png in Resources */,
 				8091D3E91BEEDA5E00E411CD /* equipment.png in Resources */,
 				8091D3F81BEEDA6700E411CD /* Jane.png in Resources */,
 				80EA96901BEFA7870034D5EA /* admin2.png in Resources */,
 				806A1EAF1BEF7A7000623688 /* doctorRoom2.jpg in Resources */,
 				80EA96961BEFA7870034D5EA /* location pin 2.png in Resources */,
 				80EA96951BEFA7870034D5EA /* lightbulb 2.png in Resources */,
+				803A50F81BF2A8CB004CECAB /* Launch Screen.storyboard in Resources */,
 				805830921BEF97E8006BFD5E /* Map.jpg in Resources */,
 				806A1EB11BEF7D9100623688 /* close.png in Resources */,
 				8091D3E71BEEDA5E00E411CD /* search.png in Resources */,
@@ -419,7 +443,9 @@
 				806A1EA71BEF728C00623688 /* Icon-60@3x.png in Resources */,
 				8091D3FC1BEEDA6700E411CD /* Emergency.png in Resources */,
 				806A1EA61BEF728C00623688 /* Icon-60@2x.png in Resources */,
+				80EA969A1BF143260034D5EA /* Echo logo no text.png in Resources */,
 				806A1E9B1BEF5DB600623688 /* compass.jpg in Resources */,
+				80EA96981BEFAD9A0034D5EA /* Yes@3x copy.png in Resources */,
 				806A1EAE1BEF7A7000623688 /* doctorRoom1.jpg in Resources */,
 				805830941BEF984F006BFD5E /* Crash_Cart.jpg in Resources */,
 			);
@@ -449,6 +475,7 @@
 				80C0A53D1BEE63DB00842CC2 /* ViewController.m in Sources */,
 				80C0A53A1BEE63DB00842CC2 /* AppDelegate.m in Sources */,
 				806A1EAA1BEF733600623688 /* InfoViewController.m in Sources */,
+				807534731BF4E12900B1BE6B /* devSettingsViewController.m in Sources */,
 				809A5AB51BEEDCEF004F7647 /* HotspotViewController.m in Sources */,
 				80C0A5371BEE63DB00842CC2 /* main.m in Sources */,
 				809A5AB21BEEDCCE004F7647 /* InductionViewController.m in Sources */,
@@ -586,15 +613,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EstimoteSDK",
 				);
 				INFOPLIST_FILE = beaconTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "anu-tech.beaconTest";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconTest/beaconTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -605,15 +637,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EstimoteSDK",
 				);
 				INFOPLIST_FILE = beaconTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "anu-tech.beaconTest";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconTest/beaconTest-Bridging-Header.h";
 			};
 			name = Release;
