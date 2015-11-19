@@ -69,8 +69,13 @@
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"] identifier:@"ranged region"];
     [self.beaconManager requestAlwaysAuthorization];
     
-    
-    
+    /*
+    //rotate the image
+    CATransform3D transform = CATransform3DIdentity;
+    transform.m34 = -1/ 500.0;
+    transform = CATransform3DRotate(transform, 90.0 * M_PI_2, 1, 0, 0);
+    self.thirdTaskCheck.layer.transform = transform;
+     */
 }
 
 -(void) viewWillAppear:(BOOL)animated {
@@ -82,10 +87,15 @@
     NSString *induced = [defaults stringForKey:@"InductionResult"];
     self.resus = [defaults stringForKey:@"ResusResult"];
     self.doctorsRoom = [defaults stringForKey:@"DoctorsResult"];
-    
-    
-    
-    
+/*
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.fromValue = [NSNumber numberWithFloat:0];
+    animation.toValue = [NSNumber numberWithFloat:2 * M_PI];
+    animation.duration = 3.0;
+    animation.repeatCount = HUGE_VALF;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    [self.thirdTaskCheck.layer addAnimation:animation forKey:@"transform.rotation.z"];
+*/
     //populate the first image and label
     if (!resus) {
     self.firstTaskLabel.text = @"Please find the resusitation trolley";
@@ -128,6 +138,7 @@
         self.thirdTaskCheck.image = [UIImage imageNamed:@"Yes@3x copy.png"];
         self.thirdTaskLabel.hidden = false;
         self.thirdTaskCheck.hidden = false;
+//        [self.thirdTaskCheck.layer removeAllAnimations];
     }
     
 }
@@ -135,6 +146,7 @@
 -(void) viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
+//    [self.thirdTaskCheck.layer removeAllAnimations];
 }
 
 

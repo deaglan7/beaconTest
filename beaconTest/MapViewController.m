@@ -70,8 +70,10 @@
     NSString *thirdPreviousString = [defaults stringForKey:@"thirdBeaconMajor"];
     
     if (!firstPreviousString) firstPreviousString = @"53111";
-    if (!secondPreviousString) secondPreviousString = @"65397";
-    if (!thirdPreviousString) thirdPreviousString = @"47967";
+//    if (!secondPreviousString) secondPreviousString = @"65397";
+//    if (!thirdPreviousString) thirdPreviousString = @"47967";
+    if (!secondPreviousString) secondPreviousString = @"47967";
+    if (!thirdPreviousString) thirdPreviousString = @"65397";
 
     
     
@@ -82,7 +84,7 @@
         self.h1Button.backgroundColor = onColor;
     }
     
-    if (nearestBeacon.major.intValue == secondPreviousString.intValue) {
+    if (nearestBeacon.major.intValue == thirdPreviousString.intValue) {
 //    if (nearestBeacon.major.intValue == 65397) {
         self.currentLabel.text = @"Toilet";
         self.h2Button.backgroundColor = onColor;
@@ -97,7 +99,7 @@
             self.currentLabel.text = @"Toilet code: 12345";
     }
     }
-    if (nearestBeacon.major.intValue == thirdPreviousString.intValue) {
+    if (nearestBeacon.major.intValue == secondPreviousString.intValue) {
         //    if (nearestBeacon.major.intValue == 47967) {
         self.currentLabel.text = @"Doctor's Office";
         self.h3Button.backgroundColor = onColor;

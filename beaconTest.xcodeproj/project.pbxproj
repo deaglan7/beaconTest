@@ -39,6 +39,8 @@
 		809A5AB21BEEDCCE004F7647 /* InductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB11BEEDCCE004F7647 /* InductionViewController.m */; };
 		809A5AB51BEEDCEF004F7647 /* HotspotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB41BEEDCEF004F7647 /* HotspotViewController.m */; };
 		809A5AB81BEEDCFD004F7647 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB71BEEDCFD004F7647 /* MapViewController.m */; };
+		80A943FB1BFCDA6E000C0878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A943FA1BFCDA6E000C0878 /* Foundation.framework */; };
+		80B2C8E41BFB5AEB006C517A /* broadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B2C8E31BFB5AEB006C517A /* broadcastViewController.m */; };
 		80C0A5371BEE63DB00842CC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A5361BEE63DB00842CC2 /* main.m */; };
 		80C0A53A1BEE63DB00842CC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A5391BEE63DB00842CC2 /* AppDelegate.m */; };
 		80C0A53D1BEE63DB00842CC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A53C1BEE63DB00842CC2 /* ViewController.m */; };
@@ -86,9 +88,9 @@
 		805830911BEF97E8006BFD5E /* Map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map.jpg; sourceTree = "<group>"; };
 		805830931BEF984F006BFD5E /* Crash_Cart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Crash_Cart.jpg; sourceTree = "<group>"; };
 		806A1E9A1BEF5DB600623688 /* compass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = compass.jpg; sourceTree = "<group>"; };
-		806A1EA21BEF631F00623688 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		806A1EA21BEF631F00623688 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "../graphics/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		806A1EA41BEF728C00623688 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
-		806A1EA51BEF728C00623688 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		806A1EA51BEF728C00623688 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@3x.png"; path = "../graphics/Icon-60@3x.png"; sourceTree = "<group>"; };
 		806A1EA81BEF733600623688 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		806A1EA91BEF733600623688 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		806A1EAC1BEF7A7000623688 /* doctorRoom1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doctorRoom1.jpg; sourceTree = "<group>"; };
@@ -116,6 +118,9 @@
 		809A5AB41BEEDCEF004F7647 /* HotspotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotspotViewController.m; sourceTree = "<group>"; };
 		809A5AB61BEEDCFD004F7647 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		809A5AB71BEEDCFD004F7647 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		80A943FA1BFCDA6E000C0878 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		80B2C8E21BFB5AEB006C517A /* broadcastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = broadcastViewController.h; sourceTree = "<group>"; };
+		80B2C8E31BFB5AEB006C517A /* broadcastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = broadcastViewController.m; sourceTree = "<group>"; };
 		80C0A5321BEE63DB00842CC2 /* beaconTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beaconTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C0A5361BEE63DB00842CC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80C0A5381BEE63DB00842CC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A943FB1BFCDA6E000C0878 /* Foundation.framework in Frameworks */,
 				80C0A56D1BEE63E700842CC2 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +229,7 @@
 		80C0A5291BEE63DB00842CC2 = {
 			isa = PBXGroup;
 			children = (
+				80A943FA1BFCDA6E000C0878 /* Foundation.framework */,
 				80C0A56B1BEE63E700842CC2 /* EstimoteSDK */,
 				80C0A5341BEE63DB00842CC2 /* beaconTest */,
 				80C0A5511BEE63DB00842CC2 /* beaconTestTests */,
@@ -257,6 +264,8 @@
 				80C0A53E1BEE63DB00842CC2 /* Main.storyboard */,
 				807534711BF4E12900B1BE6B /* devSettingsViewController.h */,
 				807534721BF4E12900B1BE6B /* devSettingsViewController.m */,
+				80B2C8E21BFB5AEB006C517A /* broadcastViewController.h */,
+				80B2C8E31BFB5AEB006C517A /* broadcastViewController.m */,
 				803A50F71BF2A8CB004CECAB /* Launch Screen.storyboard */,
 				806A1EA81BEF733600623688 /* InfoViewController.h */,
 				806A1EA91BEF733600623688 /* InfoViewController.m */,
@@ -480,6 +489,7 @@
 				80C0A5371BEE63DB00842CC2 /* main.m in Sources */,
 				809A5AB21BEEDCCE004F7647 /* InductionViewController.m in Sources */,
 				80C0A5431BEE63DB00842CC2 /* beaconTest.xcdatamodeld in Sources */,
+				80B2C8E41BFB5AEB006C517A /* broadcastViewController.m in Sources */,
 				0AFB6FAC1BEF39CA0069EFDC /* LocationService.swift in Sources */,
 				809A5AB81BEEDCFD004F7647 /* MapViewController.m in Sources */,
 			);

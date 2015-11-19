@@ -26,9 +26,10 @@
 @end
 
 @implementation ViewController
-@synthesize induce, info;
+@synthesize induce, info, induceMe;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    induceMe = FALSE;
     // Do any additional setup after loading the view, typically from a nib.
     
     //LocationService *locService = [[LocationService alloc] init];
@@ -120,11 +121,11 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *induced = [defaults stringForKey:@"InductionResult"];
     
-    if (!induced) {
+    if (!induced && !induceMe) {
         //not yet induced, launch an alert
         NSLog(@"not yet induced to this ward");
-        UIAlertController *inductionAlert = [UIAlertController alertControllerWithTitle:@"Would you like to complete induction now?" message:@"You have not completed local induction yet and must do so before you can start working on the ward" preferredStyle:UIAlertControllerStyleActionSheet];
-        UIAlertAction *induceMe = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        UIAlertController *inductionAlert = [UIAlertController alertControllerWithTitle:@"Would you like to complete induction now?" message:@"You have not completed local induction yet and must do so before you can start working on the ward" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *induceMy = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
              //do something here
             [self performSegueWithIdentifier:@"inducer" sender:induce];
             [inductionAlert dismissViewControllerAnimated:YES completion:nil];
@@ -132,11 +133,11 @@
         UIAlertAction *cancelMe = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
             [inductionAlert dismissViewControllerAnimated:YES completion:nil];
         }];
-        [inductionAlert addAction:induceMe];
+        [inductionAlert addAction:induceMy];
         [inductionAlert addAction:cancelMe];
         [self presentViewController:inductionAlert animated:YES completion:nil];
     }
-    
+    induceMe = TRUE;
 }
 
 - (void)inducer {

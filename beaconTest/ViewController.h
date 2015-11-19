@@ -13,8 +13,10 @@
 //here we are
     UIButton *induce;
     UIButton *info;
+    BOOL induceMe;
 }
 @property (nonatomic, retain) IBOutlet UIButton *induce;
 @property (nonatomic, retain) IBOutlet UIButton *info;
+@property (nonatomic) BOOL induceMe;
 @end
 
