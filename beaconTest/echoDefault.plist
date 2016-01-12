@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>UUID</key>
+		<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+	</dict>
+	<dict>
+		<key>featureMajor</key>
+		<string>53111</string>
+		<key>featureMinor</key>
+		<string>12345</string>
+		<key>featureName</key>
+		<string>Resuscitation Trolley</string>
+		<key>featureImage</key>
+		<string>Crash_Cart.jpg</string>
+		<key>featureDescription</key>
+		<string>Healthcare organisations have an obligation to provide a high-quality resuscitation service, and to ensure that staff are trained and updated regularly to a level of proficiency appropriate to each individual’s expected role. As part of the quality standards for cardiopulmonary resuscitation practice and training this document provides lists of the minimum equipment and drugs required for cardiopulmonary resuscitation.</string>
+		<key>featureTest</key>
+		<dict>
+			<key>featureQuestion</key>
+			<string>Where is the LMA?</string>
+			<key>featureAnswer</key>
+			<string>second</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>featureMajor</key>
+		<string>47967</string>
+		<key>featureMinor</key>
+		<string>12345</string>
+		<key>featureName</key>
+		<string>Doctor&apos;s Office</string>
+		<key>featureImage</key>
+		<string>doctorRoom2.jpg</string>
+		<key>featureDescription</key>
+		<string>This is a dedicated place for doctors to escape the nurses and log on to a computer with extremely poor wi fi before being pestered to do a discharge summary for a patient who isn’t going home for a week.</string>
+		<key>featureTest</key>
+		<dict>
+			<key>featureQuestion</key>
+			<string>Where is the Bleep directory?</string>
+			<key>featureAnswer</key>
+			<string>first</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>featureMajor</key>
+		<string>65397</string>
+		<key>featureMinor</key>
+		<string>12345</string>
+		<key>featureName</key>
+		<string>Toilet</string>
+		<key>featureImage</key>
+		<string></string>
+		<key>featureDescription</key>
+		<string>The code is 12345</string>
+		<key>featureTest</key>
+		<dict>
+			<key>featureQuestion</key>
+			<string>?</string>
+			<key>featureAnswer</key>
+			<string>faux pas</string>
+		</dict>
+	</dict>
+</array>
+</plist>

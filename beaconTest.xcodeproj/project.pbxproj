@@ -39,6 +39,10 @@
 		809A5AB21BEEDCCE004F7647 /* InductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB11BEEDCCE004F7647 /* InductionViewController.m */; };
 		809A5AB51BEEDCEF004F7647 /* HotspotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB41BEEDCEF004F7647 /* HotspotViewController.m */; };
 		809A5AB81BEEDCFD004F7647 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809A5AB71BEEDCFD004F7647 /* MapViewController.m */; };
+		80A1466E1C0F237D001D6C38 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A1466C1C0F237D001D6C38 /* CustomCell.m */; };
+		80A1466F1C0F237D001D6C38 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A1466D1C0F237D001D6C38 /* CustomCell.xib */; };
+		80A146721C0F23A3001D6C38 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A146711C0F23A3001D6C38 /* ListViewController.m */; };
+		80A86F6D1C45AB7600687B33 /* echoDefault.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80A86F6C1C45AB7600687B33 /* echoDefault.plist */; };
 		80A943FB1BFCDA6E000C0878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A943FA1BFCDA6E000C0878 /* Foundation.framework */; };
 		80B2C8E41BFB5AEB006C517A /* broadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B2C8E31BFB5AEB006C517A /* broadcastViewController.m */; };
 		80C0A5371BEE63DB00842CC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A5361BEE63DB00842CC2 /* main.m */; };
@@ -118,6 +122,12 @@
 		809A5AB41BEEDCEF004F7647 /* HotspotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotspotViewController.m; sourceTree = "<group>"; };
 		809A5AB61BEEDCFD004F7647 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		809A5AB71BEEDCFD004F7647 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		80A1466B1C0F237D001D6C38 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		80A1466C1C0F237D001D6C38 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		80A1466D1C0F237D001D6C38 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		80A146701C0F23A3001D6C38 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../ListViewController.h; sourceTree = "<group>"; };
+		80A146711C0F23A3001D6C38 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../ListViewController.m; sourceTree = "<group>"; };
+		80A86F6C1C45AB7600687B33 /* echoDefault.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = echoDefault.plist; sourceTree = "<group>"; };
 		80A943FA1BFCDA6E000C0878 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		80B2C8E21BFB5AEB006C517A /* broadcastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = broadcastViewController.h; sourceTree = "<group>"; };
 		80B2C8E31BFB5AEB006C517A /* broadcastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = broadcastViewController.m; sourceTree = "<group>"; };
@@ -257,6 +267,11 @@
 				80C0A53C1BEE63DB00842CC2 /* ViewController.m */,
 				809A5AB01BEEDCCE004F7647 /* InductionViewController.h */,
 				809A5AB11BEEDCCE004F7647 /* InductionViewController.m */,
+				80A146701C0F23A3001D6C38 /* ListViewController.h */,
+				80A146711C0F23A3001D6C38 /* ListViewController.m */,
+				80A1466B1C0F237D001D6C38 /* CustomCell.h */,
+				80A1466C1C0F237D001D6C38 /* CustomCell.m */,
+				80A1466D1C0F237D001D6C38 /* CustomCell.xib */,
 				809A5AB31BEEDCEF004F7647 /* HotspotViewController.h */,
 				809A5AB41BEEDCEF004F7647 /* HotspotViewController.m */,
 				809A5AB61BEEDCFD004F7647 /* MapViewController.h */,
@@ -282,6 +297,7 @@
 		80C0A5351BEE63DB00842CC2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				80A86F6C1C45AB7600687B33 /* echoDefault.plist */,
 				806A1EAB1BEF7A6200623688 /* features */,
 				8091D3E21BEEDA4800E411CD /* icons */,
 				80C0A5361BEE63DB00842CC2 /* main.m */,
@@ -419,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A1466F1C0F237D001D6C38 /* CustomCell.xib in Resources */,
 				80EA96921BEFA7870034D5EA /* Echo logo final.svg in Resources */,
 				8091D3F91BEEDA6700E411CD /* Location Pin.png in Resources */,
 				8091D3F51BEEDA6700E411CD /* Critical.png in Resources */,
@@ -449,6 +466,7 @@
 				8091D3FB1BEEDA6700E411CD /* lightbulb.png in Resources */,
 				8091D3F61BEEDA6700E411CD /* Female toilet.png in Resources */,
 				80E8BA611BEF33F9000214B4 /* estimote map 3.png in Resources */,
+				80A86F6D1C45AB7600687B33 /* echoDefault.plist in Resources */,
 				806A1EA71BEF728C00623688 /* Icon-60@3x.png in Resources */,
 				8091D3FC1BEEDA6700E411CD /* Emergency.png in Resources */,
 				806A1EA61BEF728C00623688 /* Icon-60@2x.png in Resources */,
@@ -483,6 +501,7 @@
 			files = (
 				80C0A53D1BEE63DB00842CC2 /* ViewController.m in Sources */,
 				80C0A53A1BEE63DB00842CC2 /* AppDelegate.m in Sources */,
+				80A1466E1C0F237D001D6C38 /* CustomCell.m in Sources */,
 				806A1EAA1BEF733600623688 /* InfoViewController.m in Sources */,
 				807534731BF4E12900B1BE6B /* devSettingsViewController.m in Sources */,
 				809A5AB51BEEDCEF004F7647 /* HotspotViewController.m in Sources */,
@@ -490,6 +509,7 @@
 				809A5AB21BEEDCCE004F7647 /* InductionViewController.m in Sources */,
 				80C0A5431BEE63DB00842CC2 /* beaconTest.xcdatamodeld in Sources */,
 				80B2C8E41BFB5AEB006C517A /* broadcastViewController.m in Sources */,
+				80A146721C0F23A3001D6C38 /* ListViewController.m in Sources */,
 				0AFB6FAC1BEF39CA0069EFDC /* LocationService.swift in Sources */,
 				809A5AB81BEEDCFD004F7647 /* MapViewController.m in Sources */,
 			);

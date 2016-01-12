@@ -38,6 +38,16 @@
     [self.beaconManager startMonitoringForRegion:[[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"] major:53111 minor:27862 identifier:@"monitored region"]];
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert categories:nil]];
+    
+    //check for a plist on the server
+    /*
+    NSURL *url = [NSURL URLWithString:@"http://www.anu-tech.com/echo.plist"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSDictionary *dict = [NSPropertyListSerialization propertyListFromData:data mutabilityOption:0 format:0 errorDescription:nil];
+        NSLog(@"%@", dict);
+    }];
+    */
     return YES;
 }
 
